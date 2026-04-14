@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMB Poltekkes - Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="register-page">
+    <div class="bg-health-pattern"></div>
+    <div class="container fade-in">
+        <div class="card form-card">
+            <div class="form-header">
+                <h1><i class="fas fa-notes-medical"></i> Formulir Pendaftaran</h1>
+                <a href="#" id="goToLogin" class="login-link">Sudah Punya Akun? → Masuk</a>
+            </div>
+            <div class="motivation-text">
+                <i class="fas fa-heartbeat"></i> Jangan sampai kehabisan kuota, segera daftarkan dirimu menjadi generasi kesehatan masa depan!
+            </div>
+
+            <form id="registrationForm">
+                <h3><i class="fas fa-user"></i> Informasi Pribadi</h3>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-user"></i><input type="text" id="namaLengkap" placeholder="Nama Lengkap *" required></div>
+                    <div class="radio-group">
+                        <span>Jenis Kelamin *</span>
+                        <label><input type="radio" name="jk" value="Laki-laki" required> Laki-laki</label>
+                        <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-phone"></i><input type="tel" id="noHP" placeholder="No. HP (0812xxxxxxxxx) *" required></div>
+                    <div class="input-group"><i class="fas fa-envelope"></i><input type="email" id="emailReg" placeholder="Email *" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-calendar"></i><input type="date" id="tanggalLahir" required></div>
+                    <div class="input-group"><i class="fas fa-map-marker-alt"></i><input type="text" id="tempatLahir" placeholder="Tempat Lahir *" required></div>
+                </div>
+
+                <h3><i class="fas fa-globe"></i> Data Kewarganegaraan & Sekolah</h3>
+                <div class="form-row">
+                    <select id="kewarganegaraan" required><option value="">Kewarganegaraan *</option><option>Indonesia</option><option>Asing</option></select>
+                    <div class="input-group"><i class="fas fa-id-card"></i><input type="text" id="nik" placeholder="NIK / No. KTP *" required></div>
+                </div>
+                <div class="form-row">
+                    <select id="provinsi" required><option value="">Provinsi (Asal Sekolah) *</option><option>DKI Jakarta</option><option>Jawa Barat</option><option>Jawa Tengah</option><option>Jawa Timur</option><option>Sumatera Utara</option></select>
+                    <select id="kabupaten" required><option value="">Kabupaten / Kota *</option><option>Jakarta Pusat</option><option>Bandung</option><option>Surabaya</option></select>
+                </div>
+                <div class="form-row">
+                    <select id="jenisSekolah" required><option value="">Jenis Sekolah *</option><option>SMA</option><option>SMK</option><option>MA</option></select>
+                    <div class="input-group"><i class="fas fa-school"></i><input type="text" id="npsn" placeholder="NPSN / Nama Sekolah *" required></div>
+                </div>
+
+                <h3><i class="fas fa-graduation-cap"></i> Detail Akademik & Pilihan Prodi</h3>
+                <div class="form-row">
+                    <div class="input-group"><i class="fas fa-book"></i><input type="text" id="jurusanSekolah" placeholder="Jurusan Sekolah (IPA, IPS, dll) *" required></div>
+                    <select id="tahunLulus" required><option value="">Tahun Lulus *</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option></select>
+                </div>
+                <div class="radio-group">
+                    <span>Jenis Program yang Dituju *</span>
+                    <label><input type="radio" name="program" value="IPA" required> IPA</label>
+                    <label><input type="radio" name="program" value="IPS"> IPS</label>
+                    <label><input type="radio" name="program" value="Bahasa"> Bahasa</label>
+                </div>
+                <div class="form-row">
+                    <select id="pilihan1" required><option value="">Pilihan 1 *</option><option>D3 - Keperawatan</option><option>D3 - Gizi</option><option>D3 - Farmasi</option><option>D4 - Manajemen Informasi Kesehatan</option></select>
+                    <select id="pilihan2"><option value="">Pilihan 2 (Opsional)</option><option>D3 - Keperawatan</option><option>D3 - Gizi</option></select>
+                </div>
+                <div class="form-row">
+                    <select id="pilihan3"><option value="">Pilihan 3 (Opsional)</option><option>D3 - Farmasi</option><option>D4 - Kebidanan</option></select>
+                </div>
+
+                <div class="important-note">
+                    <i class="fas fa-asterisk"></i> Tanda * berarti wajib diisi
+                </div>
+                <button type="submit" class="btn-primary btn-large"><i class="fas fa-check-circle"></i> Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>
