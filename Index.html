@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pendaftaran Mahasiswa Baru | Universitas Impian</title>
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins & Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a2b2f;  /* fallback solid color */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        /* BACKGROUND IMAGE (bisa diganti foto apapun) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.75) blur(1px);
+            z-index: -2;
+        }
+
+        /* overlay gelap biar form kontras */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        /* container form utama */
+        .form-container {
+            max-width: 920px;
+            width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(0px);
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), 0 8px 18px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* header card */
+        .card-header {
+            background: linear-gradient(135deg, #0f2c39 0%, #1b4f5c 100%);
+            padding: 1.5rem 2rem;
+            color: white;
+        }
+
+        .header-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-title h1 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .login-link {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.2s;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .login-link:hover {
+            background: rgba(255,255,255,0.35);
+            transform: scale(1.02);
+        }
+
+        .subhead {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 60px;
+        }
+
+        /* progress tip */
+        .info-banner {
+            background: #fff6e0;
+            border-left: 5px solid #f5a623;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-weight: 500;
+            color: #6b4c1a;
+        }
+
+        .info-banner i {
+            font-size: 1.6rem;
+            color: #f5a623;
+        }
+
+        /* form styling */
+        form {
+            padding: 2rem 2rem 2.5rem;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 1rem;
+        }
+
+        .form-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #1f3e48;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #2c5a66;
+            letter-spacing: 0.3px;
+        }
+
+        .required:after {
+            content: " *";
+            color: #e03a3a;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: 1.5px solid #dce3e9;
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #1f8a7c;
+            box-shadow: 0 0 0 3px rgba(31,138,124,0.2);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            padding: 6px 0;
+        }
+
+        .radio-group div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .radio-group input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+        small.hint {
+            font-size: 0.7rem;
+            color: #7c8b97;
+            margin-top: 4px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(95deg, #1f6e6b, #0f4c52);
+            border: none;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(95deg, #18807b, #0a3f44);
+            transform: translateY(-2px);
+        }
+
+        /* responsif */
+        @media (max-width: 680px) {
+            form {
+                padding: 1.5rem;
+            }
+            .card-header {
+                padding: 1rem 1.5rem;
+            }
+            .header-title h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* notifikasi simpel */
+        .toast-msg {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e2a32e6;
+            backdrop-filter: blur(8px);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 500;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: 0.2s;
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="card-header">
+        <div class="header-title">
+            <h1><i class="fas fa-graduation-cap"></i> Formulir Pendaftaran</h1>
+            <div class="login-link" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Sudah Punya Akun? <strong>Masuk</strong>
+            </div>
+        </div>
+        <div class="subhead">
+            <i class="fas fa-hourglass-half"></i> Jangan sampai kehabisan kuota! Sedikit lagi kamu akan terdaftar di perguruan tinggi impianmu.
+        </div>
+    </div>
+
+    <div class="info-banner">
+        <i class="fas fa-clipboard-list"></i> 
+        <span>Lengkap Datamu Sekarang — semua data akan terenkripsi dengan aman.</span>
+    </div>
+
+    <form id="registrationForm">
+        <!-- INFORMASI PRIBADI -->
+        <div class="form-section">
+            <h3><i class="fas fa-user-edit"></i> Informasi Pribadi</h3>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label class="required">Nama Lengkap</label>
+                    <input type="text" id="namaLengkap" placeholder="ISI NAMA LENGKAP ANDA" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label class="required">Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <div><input type="radio" name="gender" value="Laki-Laki" id="male"> <label for="male">Laki-Laki</label></div>
+                        <div><input type="radio" name="gender" value="Perempuan" id="female"> <label for="female">Perempuan</label></div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label class="required">No. HP</label>
+                    <input type="tel" id="noHp" placeholder="0812xxxxxxxxx">
+                </div>
+                <div class="input-group">
+                    <label class="required">Alamat Email</label>
+                    <input type="email" id="email" placeholder="email@domain.com">
+                </div>
+                <div class="input-group">
+                    <label class="required">Tanggal Lahir</label>
+                    <input type="date" id="tglLahir" placeholder="dd-mm-yyyy">
+                </div>
+                <div class="input-group">
+                    <label class="required">Tempat Lahir</label>
+                    <input type="text" id="tempatLahir" placeholder="ISI TEMPAT LAHIR ANDA">
+                </div>
+            </div>
+        </div>
+
+        <!-- DATA KEWARGANEGARAAN & ASAL SEKOLAH (sesuai foto) -->
+        <div class="form-section">
+            <h3><i class="fas fa-id-card"></i> Data Kewarganegaraan & Sekolah</h3>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label class="required">Kewarganegaraan</label>
+                    <select id="kewarganegaraan">
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Singapura">Singapura</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="required">NIK / No. KTP</label>
+                    <input type="text" id="nik" placeholder="Isi No. KTP Anda">
+                </div>
+                <div class="input-group">
+                    <label>Provinsi (Asal Sekolah)</label>
+                    <select id="provinsi">
+                        <option value="" disabled selected>-- Pilih Provinsi --</option>
+                        <option>DKI Jakarta</option><option>Jawa Barat</option><option>Jawa Tengah</option><option>Jawa Timur</option>
+                        <option>Banten</option><option>Sumatera Utara</option><option>Bali</option><option>Lainnya</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="required">Kabupaten / Kota</label>
+                    <select id="kabupatenKota">
+                        <option value="" disabled selected>-- Pilih Kabupaten / Kota --</option>
+                        <option>Jakarta Pusat</option><option>Bandung</option><option>Surabaya</option><option>Semarang</option>
+                        <option>Tangerang Selatan</option><option>Medan</option><option>Denpasar</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="required">Jenis Sekolah</label>
+                    <select id="jenisSekolah">
+                        <option value="" disabled selected>-- Pilih Jenis Sekolah --</option>
+                        <option>SMA Negeri</option><option>SMA Swasta</option><option>SMK Negeri</option><option>SMK Swasta</option>
+                        <option>MA Negeri</option><option>MA Swasta</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="required">NPSN / Nama Sekolah</label>
+                    <input type="text" id="npsnSekolah" placeholder="Isi NPSN / Nama Sekolah Anda">
+                </div>
+            </div>
+        </div>
+
+        <!-- JURUSAN & TAHUN LULUS, PILIHAN PRODI (Foto ketiga) -->
+        <div class="form-section">
+            <h3><i class="fas fa-book-open"></i> Detail Akademik & Pilihan Prodi</h3>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Tambah Jurusan Sekolah (cth: IPA, IPS) *</label>
+                    <input type="text" id="jurusanSekolah" placeholder="ISI JURUSAN SEKOLAH ANDA (contoh: IPA / IPS / Teknik)">
+                    <small class="hint">Jika data tidak ditemukan, silakan isi jurusan.</small>
+                </div>
+                <div class="input-group">
+                    <label class="required">Tahun Lulus</label>
+                    <select id="tahunLulus">
+                        <option value="" disabled selected>-- Pilih Tahun Lulus --</option>
+                        <option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div style="margin-top: 1.5rem;">
+                <div class="input-group" style="margin-bottom: 1rem;">
+                    <label class="required">Jenis Program yang Dituju</label>
+                    <div class="radio-group">
+                        <div><input type="radio" name="jenisProgram" value="IPA" id="ipaProg"> <label for="ipaProg">IPA</label></div>
+                        <div><input type="radio" name="jenisProgram" value="IPS" id="ipsProg"> <label for="ipsProg">IPS</label></div>
+                        <div><input type="radio" name="jenisProgram" value="Bahasa" id="bahasaProg"> <label for="bahasaProg">Bahasa</label></div>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label class="required">Pilihan 1 *</label>
+                        <select id="pilihan1">
+                            <option value="" disabled selected>-- Pilih Program Studi --</option>
+                            <option>D3 - Agroindustri</option>
+                            <option>S1 - Teknik Informatika</option>
+                            <option>S1 - Manajemen</option>
+                            <option>D4 - Akuntansi</option>
+                            <option>S1 - Hukum</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Pilihan 2</label>
+                        <select id="pilihan2">
+                            <option>-- Pilih Pilihan 2 --</option>
+                            <option>S1 - Ilmu Komunikasi</option>
+                            <option>D3 - Perhotelan</option>
+                            <option>S1 - Psikologi</option>
+                            <option>S1 - Desain Grafis</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Pilihan 3</label>
+                        <select id="pilihan3">
+                            <option>-- Pilih Pilihan 3 --</option>
+                            <option>S1 - Pendidikan Guru</option>
+                            <option>D3 - Teknik Mesin</option>
+                            <option>S1 - Hubungan Internasional</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Daftar Sekarang</button>
+        <p style="font-size: 0.7rem; text-align: center; margin-top: 1rem; color: #7f8c8d;">* Dengan mendaftar, kamu menyetujui syarat & ketentuan universitas.</p>
+    </form>
+</div>
+
+<div id="toastMsg" class="toast-msg" style="display: none;"></div>
+
+<script>
+    (function() {
+        // elemen form
+        const form = document.getElementById('registrationForm');
+        const toast = document.getElementById('toastMsg');
+
+        function showMessage(text, isError = false) {
+            toast.style.display = 'block';
+            toast.textContent = text;
+            toast.style.backgroundColor = isError ? '#b91c2ce6' : '#1f6e6be6';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // validasi form lengkap sesuai foto (field required)
+        function validateForm() {
+            // Informasi pribadi
+            const nama = document.getElementById('namaLengkap').value.trim();
+            if (!nama) { showMessage('❌ Nama lengkap wajib diisi', true); return false; }
+            
+            const genderRadios = document.querySelectorAll('input[name="gender"]');
+            let genderSelected = false;
+            for(let r of genderRadios) if(r.checked) { genderSelected = true; break; }
+            if (!genderSelected) { showMessage('❌ Pilih jenis kelamin (Laki-laki / Perempuan)', true); return false; }
+            
+            const noHp = document.getElementById('noHp').value.trim();
+            if (!noHp) { showMessage('❌ No. HP tidak boleh kosong', true); return false; }
+            const email = document.getElementById('email').value.trim();
+            if (!email || !email.includes('@')) { showMessage('❌ Masukkan email yang valid', true); return false; }
+            
+            const tglLahir = document.getElementById('tglLahir').value;
+            if (!tglLahir) { showMessage('❌ Tanggal lahir harus diisi', true); return false; }
+            const tempatLahir = document.getElementById('tempatLahir').value.trim();
+            if (!tempatLahir) { showMessage('❌ Tempat lahir wajib diisi', true); return false; }
+            
+            // kewarganegaraan (select)
+            const kwn = document.getElementById('kewarganegaraan').value;
+            if (!kwn) { showMessage('❌ Pilih kewarganegaraan', true); return false; }
+            
+            const nik = document.getElementById('nik').value.trim();
+            if (!nik) { showMessage('❌ NIK / No. KTP harus diisi', true); return false; }
+            
+            // asal sekolah: kabupaten kota required, jenis sekolah required, npsn required
+            const kabKota = document.getElementById('kabupatenKota').value;
+            if (!kabKota || kabKota === '-- Pilih Kabupaten / Kota --') { showMessage('❌ Pilih Kabupaten / Kota terlebih dahulu', true); return false; }
+            const jenisSk = document.getElementById('jenisSekolah').value;
+            if (!jenisSk || jenisSk === '-- Pilih Jenis Sekolah --') { showMessage('❌ Pilih Jenis Sekolah', true); return false; }
+            const npsn = document.getElementById('npsnSekolah').value.trim();
+            if (!npsn) { showMessage('❌ Isi NPSN / Nama Sekolah Anda', true); return false; }
+            
+            // Tahun lulus (required)
+            const thnLulus = document.getElementById('tahunLulus').value;
+            if (!thnLulus || thnLulus === '-- Pilih Tahun Lulus --') { showMessage('❌ Pilih tahun lulus', true); return false; }
+            
+            // Jenis program yang dituju (radio)
+            let programSelected = false;
+            const progRadios = document.querySelectorAll('input[name="jenisProgram"]');
+            for(let p of progRadios) if(p.checked) { programSelected = true; break; }
+            if (!programSelected) { showMessage('❌ Pilih Jenis Program yang dituju (IPA/IPS/Bahasa)', true); return false; }
+            
+            // Pilihan 1 (required)
+            const pilihan1 = document.getElementById('pilihan1').value;
+            if (!pilihan1 || pilihan1 === '-- Pilih Program Studi --') { showMessage('❌ Pilihan Program Studi 1 wajib dipilih', true); return false; }
+            
+            return true;
+        }
+
+        // event submit
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(validateForm()) {
+                // kumpulkan data untuk preview (simulasi sukses)
+                const nama = document.getElementById('namaLengkap').value;
+                const gender = document.querySelector('input[name="gender"]:checked')?.value;
+                const email = document.getElementById('email').value;
+                const prodi1 = document.getElementById('pilihan1').value;
+                showMessage(`🎉 Pendaftaran berhasil! Selamat ${nama} (${gender}) telah terdaftar di ${prodi1}. Silakan cek email ${email} untuk langkah selanjutnya.`, false);
+                // optional: reset? tidak direset agar user bisa lihat data, tapi bisa juga dibiarkan
+                // sesuai kebutuhan, kita hanya tampilkan sukses.
+                // jika ingin mengosongkan, uncomment baris berikut:
+                // form.reset(); 
+                // tapi akan kehilangan data, lebih baik tidak reset biar transparan.
+                // kita scroll ke atas
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        // Tombol masuk hanya memberikan notifikasi simulasi (sesuai flow foto)
+        const loginBtn = document.getElementById('loginBtn');
+        loginBtn.addEventListener('click', () => {
+            showMessage('🔐 Halaman masuk: Silakan login dengan akun yang sudah terdaftar (simulasi)', false);
+        });
+
+        // efek dinamis: provinsi -> kabkot tidak perlu relasi rumit, cukup placeholder.
+        // Tambahan: jika user memilih provinsi, bisa warning tapi tidak wajib untuk validasi? validasi kita hanya Kab/Kota saja.
+        // sesuai foto provinsi tidak bintang merah, tapi kabupaten/kota bintang merah.
+        // optional tambahan label required untuk kabupaten sudah ada.
+        
+        // Optional: mempercantik placeholder untuk tanggal lahir
+        const tglInput = document.getElementById('tglLahir');
+        if(tglInput) {
+            tglInput.setAttribute('placeholder', 'dd-mm-yyyy');
+        }
+        
+        // untuk menampilkan contoh background bisa diubah via url, siap pakai.
+        // Agar background foto bisa diganti, kita sudah menyematkan di body::before, user bisa mengganti url gambar.
+        console.log('Form siap digunakan, background foto bisa diganti via CSS.');
+    })();
+</script>
+</body>
+</html>
