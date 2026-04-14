@@ -1016,228 +1016,238 @@
     cursor: pointer;
 }
     </style>
-</head>
-<!-- HALAMAN UTAMA / LANDING PAGE PREMIUM -->
-<div id="landingPage" class="page active-page">
-    
-    <!-- Navbar Premium -->
-    <nav style="background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 30px rgba(0,0,0,0.05);">
-        <div style="display: flex; align-items: center; gap: 12px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Logo_Kementerian_Kesehatan_RI_2020.svg/45px-Logo_Kementerian_Kesehatan_RI_2020.svg.png" style="height: 45px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));">
-            <div>
-                <span style="font-weight: 800; font-size: 1.2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Poltekkes Kemenkes</span>
-                <p style="font-size: 0.7rem; color: #64748b;">Kementerian Kesehatan RI</p>
-            </div>
-        </div>
-        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-            <a href="#home" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Beranda</a>
-            <a href="#jurusan" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Program Studi</a>
-            <a href="#fasilitas" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Fasilitas</a>
-            <a href="#galeri" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Galeri</a>
-            <a href="#berita" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Berita</a>
-            <button onclick="showPage('loginPage')" style="padding: 0.5rem 1.5rem; border-radius: 2rem; border: none; background: transparent; color: #065f46; font-weight: 600; cursor: pointer;">Masuk</button>
-            <button onclick="showPage('registerPage')" style="padding: 0.5rem 1.5rem; border-radius: 2rem; border: none; background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">Daftar</button>
-        </div>
-    </nav>
+<body>
+    <div class="animated-bg"></div>
+    <div class="overlay-pattern"></div>
+    <div class="particles" id="particles"></div>
 
-    <!-- Hero Section Premium dengan Animasi -->
-    <section id="home" style="background: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #059669 100%); color: white; padding: 5rem 2rem; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
-        <div style="position: absolute; bottom: -20%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; text-align: center;">
-            <div style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 2rem; margin-bottom: 1.5rem;">
-                <i class="fas fa-award"></i> Akreditasi Unggul BAN-PT
+    <!-- HALAMAN UTAMA / LANDING PAGE PREMIUM -->
+    <div id="landingPage" class="page active-page">
+        
+        <!-- Navbar Premium -->
+        <nav style="background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 30px rgba(0,0,0,0.05);">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="poltekes.png" style="height: 45px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));" alt="Logo Poltekkes">
+                <div>
+                    <span style="font-weight: 800; font-size: 1.2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Poltekkes Kemenkes</span>
+                    <p style="font-size: 0.7rem; color: #64748b;">Kementerian Kesehatan RI</p>
+                </div>
             </div>
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800;">Politeknik Kesehatan<br>Kementerian Kesehatan RI</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; opacity: 0.95;">Menjadi Pusat Pendidikan Vokasi Kesehatan Unggul di Asia Tenggara yang Menghasilkan Lulusan Profesional, Berdaya Saing Global, dan Berkarakter</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <button onclick="showPage('registerPage')" style="background: white; color: #065f46; padding: 1rem 2rem; border-radius: 3rem; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; font-size: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"><i class="fas fa-arrow-right"></i> Daftar Sekarang</button>
-                <button onclick="document.getElementById('jurusan').scrollIntoView({behavior:'smooth'})" style="background: transparent; border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 3rem; font-weight: bold; cursor: pointer; transition: 0.3s;"><i class="fas fa-graduation-cap"></i> Lihat Program Studi</button>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <a href="#home" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Beranda</a>
+                <a href="#jurusan" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Program Studi</a>
+                <a href="#fasilitas" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Fasilitas</a>
+                <a href="#galeri" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Galeri</a>
+                <a href="#berita" style="text-decoration: none; color: #1e293b; font-weight: 500; padding: 0.5rem 1rem;">Berita</a>
+                <button onclick="showPage('loginPage')" style="padding: 0.5rem 1.5rem; border-radius: 2rem; border: none; background: transparent; color: #065f46; font-weight: 600; cursor: pointer;">Masuk</button>
+                <button onclick="showPage('registerPage')" style="padding: 0.5rem 1.5rem; border-radius: 2rem; border: none; background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(16,185,129,0.3);">Daftar</button>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- Statistik Cepat -->
-    <div style="max-width: 1200px; margin: -2rem auto 0; position: relative; z-index: 10; padding: 0 1rem;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; background: white; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);">
-            <div style="text-align: center;"><i class="fas fa-users" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">15.000+</h2><p style="color: #64748b;">Mahasiswa Aktif</p></div>
-            <div style="text-align: center;"><i class="fas fa-chalkboard-user" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">500+</h2><p style="color: #64748b;">Dosen Berkualitas</p></div>
-            <div style="text-align: center;"><i class="fas fa-hospital" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">500+</h2><p style="color: #64748b;">RS Mitra Kerjasama</p></div>
-            <div style="text-align: center;"><i class="fas fa-graduation-cap" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">92%</h2><p style="color: #64748b;">Terserap Kerja</p></div>
-        </div>
-    </div>
+        <!-- Hero Section Premium dengan Animasi -->
+        <section id="home" style="background: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #059669 100%); color: white; padding: 5rem 2rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+            <div style="position: absolute; bottom: -20%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+            <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; text-align: center;">
+                <div style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 2rem; margin-bottom: 1.5rem;">
+                    <i class="fas fa-award"></i> Akreditasi Unggul BAN-PT
+                </div>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800;">Politeknik Kesehatan<br>Kementerian Kesehatan RI</h1>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; opacity: 0.95;">Menjadi Pusat Pendidikan Vokasi Kesehatan Unggul di Asia Tenggara yang Menghasilkan Lulusan Profesional, Berdaya Saing Global, dan Berkarakter</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button onclick="showPage('registerPage')" style="background: white; color: #065f46; padding: 1rem 2rem; border-radius: 3rem; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; font-size: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"><i class="fas fa-arrow-right"></i> Daftar Sekarang</button>
+                    <button onclick="document.getElementById('jurusan').scrollIntoView({behavior:'smooth'})" style="background: transparent; border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 3rem; font-weight: bold; cursor: pointer; transition: 0.3s;"><i class="fas fa-graduation-cap"></i> Lihat Program Studi</button>
+                </div>
+            </div>
+        </section>
 
-    <!-- Program Studi Unggulan -->
-    <section id="jurusan" style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <p style="color: #10b981; font-weight: 600; letter-spacing: 2px;">PROGRAM STUDI</p>
-            <h2 style="font-size: 2.2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pilihan Program Studi Unggulan</h2>
-            <p style="color: #64748b; max-width: 600px; margin: 1rem auto 0;">Terakreditasi Unggul dan Relevan dengan Kebutuhan Dunia Kesehatan</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-heartbeat"></i></div>
-                <h3 style="color: #064e3b; font-size: 1.4rem;">D3 Keperawatan</h3>
-                <p style="color: #64748b; margin: 0.5rem 0;">Menyiapkan perawat profesional dengan kompetensi klinis dan manajemen keperawatan terbaik.</p>
-                <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
-            </div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-capsules"></i></div>
-                <h3 style="color: #064e3b; font-size: 1.4rem;">D3 Farmasi</h3>
-                <p style="color: #64748b; margin: 0.5rem 0;">Tenaga teknis kefarmasian yang handal dalam pelayanan dan manajemen obat.</p>
-                <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
-            </div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-apple-alt"></i></div>
-                <h3 style="color: #064e3b; font-size: 1.4rem;">D3 Gizi</h3>
-                <p style="color: #64748b; margin: 0.5rem 0;">Ahli gizi yang mampu merencanakan intervensi gizi masyarakat dan klinis.</p>
-                <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
-            </div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-microscope"></i></div>
-                <h3 style="color: #064e3b; font-size: 1.4rem;">D4 Teknologi Lab Medis</h3>
-                <p style="color: #64748b; margin: 0.5rem 0;">Ahli laboratorium kesehatan dengan akreditasi internasional.</p>
-                <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
-            </div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-tooth"></i></div>
-                <h3 style="color: #064e3b; font-size: 1.4rem;">D4 Kesehatan Gigi</h3>
-                <p style="color: #64748b; margin: 0.5rem 0;">Terapis gigi dan mulut dengan teknologi modern serta promotif preventif.</p>
-                <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
-            </div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-chart-line"></i></div>
-                <h3 style="color: #064e3b; font-size: 1.4rem;">D4 Manajemen Informasi Kesehatan</h3>
-                <p style="color: #64748b; margin: 0.5rem 0;">Manajemen rekam medis dan sistem informasi rumah sakit masa depan.</p>
-                <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+        <!-- Statistik Cepat -->
+        <div style="max-width: 1200px; margin: -2rem auto 0; position: relative; z-index: 10; padding: 0 1rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; background: white; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);">
+                <div style="text-align: center;"><i class="fas fa-users" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">15.000+</h2><p style="color: #64748b;">Mahasiswa Aktif</p></div>
+                <div style="text-align: center;"><i class="fas fa-chalkboard-user" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">500+</h2><p style="color: #64748b;">Dosen Berkualitas</p></div>
+                <div style="text-align: center;"><i class="fas fa-hospital" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">500+</h2><p style="color: #64748b;">RS Mitra Kerjasama</p></div>
+                <div style="text-align: center;"><i class="fas fa-graduation-cap" style="font-size: 2rem; color: #10b981;"></i><h2 style="font-size: 1.8rem; color: #064e3b;">92%</h2><p style="color: #64748b;">Terserap Kerja</p></div>
             </div>
         </div>
-    </section>
 
-    <!-- Timeline Pendaftaran -->
-    <div style="background: #f0fdf4; padding: 4rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
+        <!-- Program Studi Unggulan -->
+        <section id="jurusan" style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
             <div style="text-align: center; margin-bottom: 3rem;">
-                <p style="color: #10b981; font-weight: 600;">JADWAL PENDAFTARAN</p>
-                <h2 style="font-size: 2rem; color: #064e3b;">Timeline Seleksi SPMB 2026</h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center; position: relative;">
-                    <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-calendar-plus"></i></div>
-                    <h3>Gelombang 1</h3>
-                    <p style="color: #64748b;">1 Jan - 30 Mar 2026</p>
-                    <span style="font-size: 0.7rem; color: #10b981;">Pendaftaran & Ujian</span>
-                </div>
-                <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
-                    <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Gelombang 2</h3>
-                    <p style="color: #64748b;">1 Apr - 30 Jun 2026</p>
-                    <span style="font-size: 0.7rem; color: #10b981;">Pendaftaran & Ujian</span>
-                </div>
-                <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
-                    <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Pengumuman</h3>
-                    <p style="color: #64748b;">5 Agustus 2026</p>
-                    <span style="font-size: 0.7rem; color: #10b981;">Hasil Seleksi</span>
-                </div>
-                <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
-                    <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-chalkboard-user"></i></div>
-                    <h3>Mulai Kuliah</h3>
-                    <p style="color: #64748b;">1 September 2026</p>
-                    <span style="font-size: 0.7rem; color: #10b981;">Tahun Akademik Baru</span>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: #d1fae5; border-radius: 1rem;">
-                <p style="font-size: 1.2rem; font-weight: bold; color: #065f46;"><i class="fas fa-gem"></i> Biaya Pendaftaran GRATIS! Tidak dipungut biaya apapun.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Fasilitas Unggulan -->
-    <section id="fasilitas" style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <p style="color: #10b981; font-weight: 600;">FASILITAS KAMPUS</p>
-            <h2 style="font-size: 2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fasilitas Modern & Lengkap</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-            <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-flask" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">Lab Terakreditasi</h3><p>Standar ISO & Biosafety level 2</p></div>
-            <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-wifi" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">WiFi Kampus Gratis</h3><p>Akses internet cepat 24 jam</p></div>
-            <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-hospital-user" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">RS Pendidikan</h3><p>500+ rumah sakit mitra</p></div>
-            <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-chalkboard-user" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">Dosen Profesional</h3><p>Ahli dan praktisi kesehatan</p></div>
-        </div>
-    </section>
-
-    <!-- Galeri Foto Premium -->
-    <section id="galeri" style="background: #f8fafc; padding: 5rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <p style="color: #10b981; font-weight: 600;">GALERI KAMPUS</p>
-                <h2 style="font-size: 2rem; color: #064e3b;">Suasana Belajar & Fasilitas Terbaik</h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Gedung Utama</h4><p style="color: #64748b;">Kampus Terpadu Poltekkes</p></div></div>
-                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Laboratorium Klinik</h4><p style="color: #64748b;">Peralatan canggih</p></div></div>
-                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Perpustakaan Digital</h4><p style="color: #64748b;">Ruang belajar modern</p></div></div>
-                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Rumah Sakit Pendidikan</h4><p style="color: #64748b;">Tempat praktik mahasiswa</p></div></div>
-                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Kegiatan Mahasiswa</h4><p style="color: #64748b;">Event & organisasi</p></div></div>
-                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Wisuda Sarjana</h4><p style="color: #64748b;">Lulusan siap pakai</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimoni Alumni -->
-    <section style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <p style="color: #10b981; font-weight: 600;">TESTIMONI ALUMNI</p>
-            <h2 style="font-size: 2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Apa Kata Mereka?</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://randomuser.me/api/portraits/women/68.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color: #10b981; font-size: 1.5rem; opacity: 0.5;"></i><p style="font-style: italic; margin: 1rem 0;">"Kuliah di Poltekkes memberikan pengalaman luar biasa. Fasilitas lengkap dan dosen profesional."</p><h4 style="color: #064e3b;">dr. Sarah Wijaya</h4><p style="font-size: 0.8rem; color: #64748b;">Alumni Keperawatan</p></div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://randomuser.me/api/portraits/women/45.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color: #10b981; font-size: 1.5rem; opacity: 0.5;"></i><p style="font-style: italic; margin: 1rem 0;">"Berkat Poltekkes, saya langsung bekerja di RS ternama setelah lulus."</p><h4 style="color: #064e3b;">Nurul Aini, S.Kep</h4><p style="font-size: 0.8rem; color: #64748b;">Perawat RS Siloam</p></div>
-            <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color: #10b981; font-size: 1.5rem; opacity: 0.5;"></i><p style="font-style: italic; margin: 1rem 0;">"Proses pendaftaran mudah, biaya terjangkau, kualitas pendidikan terbaik."</p><h4 style="color: #064e3b;">Ahmad Fauzi, S.Farm</h4><p style="font-size: 0.8rem; color: #64748b;">Apoteker Kimia Farma</p></div>
-        </div>
-    </section>
-
-    <!-- Berita Terbaru -->
-    <section id="berita" style="background: #f8fafc; padding: 5rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <p style="color: #10b981; font-weight: 600;">BERITA TERBARU</p>
-                <h2 style="font-size: 2rem; color: #064e3b;">Informasi & Kegiatan Terkini</h2>
+                <p style="color: #10b981; font-weight: 600; letter-spacing: 2px;">PROGRAM STUDI</p>
+                <h2 style="font-size: 2.2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pilihan Program Studi Unggulan</h2>
+                <p style="color: #64748b; max-width: 600px; margin: 1rem auto 0;">Terakreditasi Unggul dan Relevan dengan Kebutuhan Dunia Kesehatan</p>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=220&fit=crop" style="width: 100%; height: 200px; object-fit: cover;"><div style="padding: 1.5rem;"><p style="color: #10b981; font-size: 0.8rem;"><i class="far fa-calendar-alt"></i> 20 Maret 2026</p><h3>Pendaftaran Gelombang 1 Dibuka!</h3><p style="color: #64748b; margin-top: 0.5rem;">Segera daftarkan diri anda sebelum kuota habis...</p></div></div>
-                <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b53?w=500&h=220&fit=crop" style="width: 100%; height: 200px; object-fit: cover;"><div style="padding: 1.5rem;"><p style="color: #10b981; font-size: 0.8rem;"><i class="far fa-calendar-alt"></i> 15 Maret 2026</p><h3>Beasiswa Prestasi Tersedia</h3><p style="color: #64748b; margin-top: 0.5rem;">Dapatkan beasiswa hingga 100% untuk 1000 pendaftar terbaik...</p></div></div>
-                <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&h=220&fit=crop" style="width: 100%; height: 200px; object-fit: cover;"><div style="padding: 1.5rem;"><p style="color: #10b981; font-size: 0.8rem;"><i class="far fa-calendar-alt"></i> 10 Maret 2026</p><h3>Webinar SPMB 2026</h3><p style="color: #64748b; margin-top: 0.5rem;">Ikuti webinar gratis tentang tips lolos seleksi...</p></div></div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-heartbeat"></i></div>
+                    <h3 style="color: #064e3b; font-size: 1.4rem;">D3 Keperawatan</h3>
+                    <p style="color: #64748b; margin: 0.5rem 0;">Menyiapkan perawat profesional dengan kompetensi klinis dan manajemen keperawatan terbaik.</p>
+                    <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+                </div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-capsules"></i></div>
+                    <h3 style="color: #064e3b; font-size: 1.4rem;">D3 Farmasi</h3>
+                    <p style="color: #64748b; margin: 0.5rem 0;">Tenaga teknis kefarmasian yang handal dalam pelayanan dan manajemen obat.</p>
+                    <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+                </div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-apple-alt"></i></div>
+                    <h3 style="color: #064e3b; font-size: 1.4rem;">D3 Gizi</h3>
+                    <p style="color: #64748b; margin: 0.5rem 0;">Ahli gizi yang mampu merencanakan intervensi gizi masyarakat dan klinis.</p>
+                    <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+                </div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-microscope"></i></div>
+                    <h3 style="color: #064e3b; font-size: 1.4rem;">D4 Teknologi Lab Medis</h3>
+                    <p style="color: #64748b; margin: 0.5rem 0;">Ahli laboratorium kesehatan dengan akreditasi internasional.</p>
+                    <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+                </div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-tooth"></i></div>
+                    <h3 style="color: #064e3b; font-size: 1.4rem;">D4 Kesehatan Gigi</h3>
+                    <p style="color: #64748b; margin: 0.5rem 0;">Terapis gigi dan mulut dengan teknologi modern serta promotif preventif.</p>
+                    <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+                </div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid rgba(16,185,129,0.1);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5, #a7f3d0); border-radius: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; color: #065f46;"><i class="fas fa-chart-line"></i></div>
+                    <h3 style="color: #064e3b; font-size: 1.4rem;">D4 Manajemen Informasi Kesehatan</h3>
+                    <p style="color: #64748b; margin: 0.5rem 0;">Manajemen rekam medis dan sistem informasi rumah sakit masa depan.</p>
+                    <span style="display: inline-block; background: #d1fae5; color: #065f46; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.7rem; font-weight: 600; margin-top: 1rem;">Akreditasi Unggul</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Pendaftaran -->
+        <div style="background: #f0fdf4; padding: 4rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <p style="color: #10b981; font-weight: 600;">JADWAL PENDAFTARAN</p>
+                    <h2 style="font-size: 2rem; color: #064e3b;">Timeline Seleksi SPMB 2026</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center; position: relative;">
+                        <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-calendar-plus"></i></div>
+                        <h3>Gelombang 1</h3>
+                        <p style="color: #64748b;">1 Jan - 30 Mar 2026</p>
+                        <span style="font-size: 0.7rem; color: #10b981;">Pendaftaran & Ujian</span>
+                    </div>
+                    <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
+                        <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Gelombang 2</h3>
+                        <p style="color: #64748b;">1 Apr - 30 Jun 2026</p>
+                        <span style="font-size: 0.7rem; color: #10b981;">Pendaftaran & Ujian</span>
+                    </div>
+                    <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
+                        <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Pengumuman</h3>
+                        <p style="color: #64748b;">5 Agustus 2026</p>
+                        <span style="font-size: 0.7rem; color: #10b981;">Hasil Seleksi</span>
+                    </div>
+                    <div style="background: white; border-radius: 1rem; padding: 1.5rem; text-align: center;">
+                        <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white;"><i class="fas fa-chalkboard-user"></i></div>
+                        <h3>Mulai Kuliah</h3>
+                        <p style="color: #64748b;">1 September 2026</p>
+                        <span style="font-size: 0.7rem; color: #10b981;">Tahun Akademik Baru</span>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem; padding: 1rem; background: #d1fae5; border-radius: 1rem;">
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #065f46;"><i class="fas fa-gem"></i> Biaya Pendaftaran GRATIS! Tidak dipungut biaya apapun.</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- CTA Banner -->
-    <div style="background: linear-gradient(135deg, #10b981, #059669); padding: 5rem 2rem; text-align: center; color: white;">
-        <h2 style="font-size: 2rem;">🎓 Mulai Perjalanan Karirmu di Bidang Kesehatan</h2>
-        <p style="margin: 1rem 0; font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">Daftarkan dirimu sekarang dan raih masa depan cerah sebagai tenaga kesehatan profesional</p>
-        <button onclick="showPage('registerPage')" style="background: #064e3b; color: white; padding: 1rem 2.5rem; border-radius: 3rem; font-weight: bold; border: none; cursor: pointer; margin-top: 1.5rem; font-size: 1rem; transition: 0.3s;"><i class="fas fa-arrow-right"></i> Daftar Sekarang</button>
-    </div>
+        <!-- Fasilitas Unggulan -->
+        <section id="fasilitas" style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="color: #10b981; font-weight: 600;">FASILITAS KAMPUS</p>
+                <h2 style="font-size: 2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fasilitas Modern & Lengkap</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-flask" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">Lab Terakreditasi</h3><p>Standar ISO & Biosafety level 2</p></div>
+                <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-wifi" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">WiFi Kampus Gratis</h3><p>Akses internet cepat 24 jam</p></div>
+                <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-hospital-user" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">RS Pendidikan</h3><p>500+ rumah sakit mitra</p></div>
+                <div style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;"><i class="fas fa-chalkboard-user" style="font-size: 3rem; color: #10b981;"></i><h3 style="margin: 1rem 0;">Dosen Profesional</h3><p>Ahli dan praktisi kesehatan</p></div>
+            </div>
+        </section>
 
-    <!-- Footer Premium -->
-    <footer style="background: #0f172a; color: #cbd5e1; padding: 3rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-            <div><h3 style="color: white; margin-bottom: 1rem;">Poltekkes Kemenkes RI</h3><p>Jl. Hang Jebat III, Kebayoran Baru, Jakarta Selatan</p></div>
-            <div><h3 style="color: white; margin-bottom: 1rem;">Kontak</h3><p>📞 1500-567 (24 Jam)</p><p>✉️ spmb@poltekkes.kemkes.go.id</p><p>📱 WhatsApp: 0811-888-5678</p></div>
-            <div><h3 style="color: white; margin-bottom: 1rem;">Sosial Media</h3><p><i class="fab fa-instagram"></i> @poltekkeskemenkes</p><p><i class="fab fa-youtube"></i> Poltekkes TV</p><p><i class="fab fa-facebook"></i> Poltekkes Kemenkes</p></div>
+        <!-- Galeri Foto Premium -->
+        <section id="galeri" style="background: #f8fafc; padding: 5rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <p style="color: #10b981; font-weight: 600;">GALERI KAMPUS</p>
+                    <h2 style="font-size: 2rem; color: #064e3b;">Suasana Belajar & Fasilitas Terbaik</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Gedung Utama</h4><p style="color: #64748b;">Kampus Terpadu Poltekkes</p></div></div>
+                    <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Laboratorium Klinik</h4><p style="color: #64748b;">Peralatan canggih</p></div></div>
+                    <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Perpustakaan Digital</h4><p style="color: #64748b;">Ruang belajar modern</p></div></div>
+                    <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Rumah Sakit Pendidikan</h4><p style="color: #64748b;">Tempat praktik mahasiswa</p></div></div>
+                    <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Kegiatan Mahasiswa</h4><p style="color: #64748b;">Event & organisasi</p></div></div>
+                    <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&h=300&fit=crop" style="width: 100%; height: 220px; object-fit: cover;"><div style="padding: 1rem; background: white;"><h4>Wisuda Sarjana</h4><p style="color: #64748b;">Lulusan siap pakai</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni Alumni -->
+        <section style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="color: #10b981; font-weight: 600;">TESTIMONI ALUMNI</p>
+                <h2 style="font-size: 2rem; background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Apa Kata Mereka?</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://randomuser.me/api/portraits/women/68.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color: #10b981; font-size: 1.5rem; opacity: 0.5;"></i><p style="font-style: italic; margin: 1rem 0;">"Kuliah di Poltekkes memberikan pengalaman luar biasa. Fasilitas lengkap dan dosen profesional."</p><h4 style="color: #064e3b;">dr. Sarah Wijaya</h4><p style="font-size: 0.8rem; color: #64748b;">Alumni Keperawatan</p></div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://randomuser.me/api/portraits/women/45.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color: #10b981; font-size: 1.5rem; opacity: 0.5;"></i><p style="font-style: italic; margin: 1rem 0;">"Berkat Poltekkes, saya langsung bekerja di RS ternama setelah lulus."</p><h4 style="color: #064e3b;">Nurul Aini, S.Kep</h4><p style="font-size: 0.8rem; color: #64748b;">Perawat RS Siloam</p></div>
+                <div style="background: white; border-radius: 1.5rem; padding: 2rem; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color: #10b981; font-size: 1.5rem; opacity: 0.5;"></i><p style="font-style: italic; margin: 1rem 0;">"Proses pendaftaran mudah, biaya terjangkau, kualitas pendidikan terbaik."</p><h4 style="color: #064e3b;">Ahmad Fauzi, S.Farm</h4><p style="font-size: 0.8rem; color: #64748b;">Apoteker Kimia Farma</p></div>
+            </div>
+        </section>
+
+        <!-- Berita Terbaru -->
+        <section id="berita" style="background: #f8fafc; padding: 5rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <p style="color: #10b981; font-weight: 600;">BERITA TERBARU</p>
+                    <h2 style="font-size: 2rem; color: #064e3b;">Informasi & Kegiatan Terkini</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=220&fit=crop" style="width: 100%; height: 200px; object-fit: cover;"><div style="padding: 1.5rem;"><p style="color: #10b981; font-size: 0.8rem;"><i class="far fa-calendar-alt"></i> 20 Maret 2026</p><h3>Pendaftaran Gelombang 1 Dibuka!</h3><p style="color: #64748b; margin-top: 0.5rem;">Segera daftarkan diri anda sebelum kuota habis...</p></div></div>
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b53?w=500&h=220&fit=crop" style="width: 100%; height: 200px; object-fit: cover;"><div style="padding: 1.5rem;"><p style="color: #10b981; font-size: 0.8rem;"><i class="far fa-calendar-alt"></i> 15 Maret 2026</p><h3>Beasiswa Prestasi Tersedia</h3><p style="color: #64748b; margin-top: 0.5rem;">Dapatkan beasiswa hingga 100% untuk 1000 pendaftar terbaik...</p></div></div>
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&h=220&fit=crop" style="width: 100%; height: 200px; object-fit: cover;"><div style="padding: 1.5rem;"><p style="color: #10b981; font-size: 0.8rem;"><i class="far fa-calendar-alt"></i> 10 Maret 2026</p><h3>Webinar SPMB 2026</h3><p style="color: #64748b; margin-top: 0.5rem;">Ikuti webinar gratis tentang tips lolos seleksi...</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <div style="background: linear-gradient(135deg, #10b981, #059669); padding: 5rem 2rem; text-align: center; color: white;">
+            <h2 style="font-size: 2rem;">🎓 Mulai Perjalanan Karirmu di Bidang Kesehatan</h2>
+            <p style="margin: 1rem 0; font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">Daftarkan dirimu sekarang dan raih masa depan cerah sebagai tenaga kesehatan profesional</p>
+            <button onclick="showPage('registerPage')" style="background: #064e3b; color: white; padding: 1rem 2.5rem; border-radius: 3rem; font-weight: bold; border: none; cursor: pointer; margin-top: 1.5rem; font-size: 1rem; transition: 0.3s;"><i class="fas fa-arrow-right"></i> Daftar Sekarang</button>
         </div>
-        <hr style="margin: 2rem 0 1rem; border-color: #334155;">
-        <p style="text-align: center;">&copy; 2026 SPMB Poltekkes Kementerian Kesehatan Republik Indonesia</p>
-    </footer>
-</div>
+
+        <!-- Footer Premium -->
+        <footer style="background: #0f172a; color: #cbd5e1; padding: 3rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+                        <img src="poltekes.png" style="height: 35px;" alt="Logo Poltekkes">
+                        <h3 style="color: white;">Poltekkes Kemenkes RI</h3>
+                    </div>
+                    <p>Jl. Hang Jebat III, Kebayoran Baru, Jakarta Selatan</p>
+                </div>
+                <div><h3 style="color: white; margin-bottom: 1rem;">Kontak</h3><p>📞 1500-567 (24 Jam)</p><p>✉️ spmb@poltekkes.kemkes.go.id</p><p>📱 WhatsApp: 0811-888-5678</p></div>
+                <div><h3 style="color: white; margin-bottom: 1rem;">Sosial Media</h3><p><i class="fab fa-instagram"></i> @poltekkeskemenkes</p><p><i class="fab fa-youtube"></i> Poltekkes TV</p><p><i class="fab fa-facebook"></i> Poltekkes Kemenkes</p></div>
+            </div>
+            <hr style="margin: 2rem 0 1rem; border-color: #334155;">
+            <p style="text-align: center;">&copy; 2026 SPMB Poltekkes Kementerian Kesehatan Republik Indonesia</p>
+        </footer>
+    </div>
 
     <!-- Halaman Login -->
     <div id="loginPage" class="page">
         <div class="container">
             <div class="card glass-card">
                 <div class="logo-area">
-                    <img src="poltekes.png" style="height: 45px;"> class="kemenkes-logo">
+                    <img src="poltekes.png" alt="Logo Poltekkes" style="height: 60px; margin-bottom: 0.5rem;">
                     <h2 style="background: linear-gradient(135deg, #065f46, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">SPMB Poltekkes</h2>
                     <p style="color:#64748b;">Kementerian Kesehatan Republik Indonesia</p>
                 </div>
@@ -1254,6 +1264,7 @@
                     <button type="submit" class="btn-primary"><i class="fas fa-arrow-right-to-bracket"></i> Masuk</button>
                 </form>
                 <p class="toggle-link">Belum punya akun? <a onclick="showPage('registerPage')">Daftar Sekarang</a></p>
+                <p class="toggle-link"><a onclick="showPage('landingPage')">← Kembali ke Beranda</a></p>
             </div>
         </div>
     </div>
@@ -1384,51 +1395,45 @@
                     </div>
                     <button type="submit" class="btn-primary"><i class="fas fa-check-circle"></i> Daftar Sekarang</button>
                 </form>
+                <p class="toggle-link" style="text-align:center; margin-top:1rem;"><a onclick="showPage('landingPage')">← Kembali ke Beranda</a></p>
             </div>
         </div>
     </div>
 
-    <!-- Halaman Dashboard dengan Halaman Utama SUPER PREMIUM -->
+    <!-- Halaman Dashboard -->
     <div id="dashboardPage" class="page">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <img src=<img src="poltekes.png" style="height: 45px;"> alt="Logo"> 
+                    <img src="poltekes.png" alt="Logo Poltekkes" style="height: 40px;">
                     <span>SPMB Poltekkes Kemenkes</span>
                 </div>
                 <div class="nav-links">
-    <a onclick="showDashboardSection('homeSection')"><i class="fas fa-home"></i> Beranda</a>
-    <a onclick="showDashboardSection('infoSection')"><i class="fas fa-info-circle"></i> Informasi</a>
-    <a onclick="showDashboardSection('jalurSection')"><i class="fas fa-road"></i> Jalur</a>
-    <a onclick="showDashboardSection('prosesSection')"><i class="fas fa-chalkboard-user"></i> Proses</a>
-    <a onclick="showDashboardSection('bantuanSection')"><i class="fas fa-question-circle"></i> Bantuan</a>
-    <a onclick="logout()"><i class="fas fa-sign-out-alt"></i> Keluar</a>
-</div>
+                    <a onclick="showDashboardSection('homeSection')"><i class="fas fa-home"></i> Beranda</a>
+                    <a onclick="showDashboardSection('infoSection')"><i class="fas fa-info-circle"></i> Informasi</a>
+                    <a onclick="showDashboardSection('jalurSection')"><i class="fas fa-road"></i> Jalur</a>
+                    <a onclick="showDashboardSection('prosesSection')"><i class="fas fa-chalkboard-user"></i> Proses</a>
+                    <a onclick="showDashboardSection('bantuanSection')"><i class="fas fa-question-circle"></i> Bantuan</a>
+                    <a onclick="logout()"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                </div>
             </div>
         </nav>
 
         <main class="dashboard-content">
             <div id="homeSection" class="section active">
-                <!-- HERO SECTION PREMIUM -->
                 <div class="hero-section">
-                    <div class="hero-badge">
-                        <i class="fas fa-graduation-cap"></i> Pendaftaran Gelombang 1 Dibuka!
-                    </div>
+                    <div class="hero-badge"><i class="fas fa-graduation-cap"></i> Pendaftaran Gelombang 1 Dibuka!</div>
                     <h1>Selamat Datang di</h1>
                     <h2>Sistem Penerimaan Mahasiswa Baru</h2>
                     <p>POLITEKNIK KESEHATAN KEMENTERIAN KESEHATAN REPUBLIK INDONESIA</p>
-                    <p style="font-size: 1rem; margin-top: 0.5rem;">Tahun Akademik 2026/2027</p>
                     <div class="hero-buttons">
                         <button class="hero-btn hero-btn-primary" onclick="showDashboardSection('infoSection')"><i class="fas fa-info-circle"></i> Informasi Lengkap</button>
                         <button class="hero-btn hero-btn-secondary" onclick="showPage('registerPage')"><i class="fas fa-file-alt"></i> Daftar Sekarang</button>
                     </div>
                 </div>
 
-                <!-- COUNTDOWN TIMER -->
                 <div class="countdown-section">
-                    <div class="countdown-title">
-                        <i class="fas fa-clock"></i> Batas Akhir Pendaftaran Gelombang 1
-                    </div>
+                    <div class="countdown-title"><i class="fas fa-clock"></i> Batas Akhir Pendaftaran Gelombang 1</div>
                     <div class="countdown-timer" id="countdown">
                         <div class="countdown-item"><div class="countdown-number" id="days">00</div><div class="countdown-label">Hari</div></div>
                         <div class="countdown-item"><div class="countdown-number" id="hours">00</div><div class="countdown-label">Jam</div></div>
@@ -1437,900 +1442,168 @@
                     </div>
                 </div>
 
-                <!-- SLIDER PREMIUM -->
                 <div class="slider-container">
                     <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
                     <button class="slider-btn next-btn" onclick="nextSlide()">❯</button>
                     <div class="slider-wrapper">
                         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&h=550&fit=crop');">
-                            <div class="slide-content">
-                                <h3>🏥 Fasilitas Kesehatan Modern</h3>
-                                <p>Laboratorium canggih dan rumah sakit pendidikan terakreditasi A</p>
-                            </div>
+                            <div class="slide-content"><h3>🏥 Fasilitas Kesehatan Modern</h3><p>Laboratorium canggih dan rumah sakit pendidikan terakreditasi A</p></div>
                         </div>
                         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&h=550&fit=crop');">
-                            <div class="slide-content">
-                                <h3>👩‍⚕️ Tenaga Pendidik Profesional</h3>
-                                <p>Dosen-dosen ahli dengan pengalaman di bidang kesehatan</p>
-                            </div>
+                            <div class="slide-content"><h3>👩‍⚕️ Tenaga Pendidik Profesional</h3><p>Dosen-dosen ahli dengan pengalaman di bidang kesehatan</p></div>
                         </div>
                         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=1600&h=550&fit=crop');">
-                            <div class="slide-content">
-                                <h3>🎓 Wisuda Sarjana Terapan</h3>
-                                <p>Lulusan siap pakai dan terserap di dunia kesehatan</p>
-                            </div>
+                            <div class="slide-content"><h3>🎓 Wisuda Sarjana Terapan</h3><p>Lulusan siap pakai dan terserap di dunia kesehatan</p></div>
                         </div>
                     </div>
-                    <div class="slider-dots">
-                        <div class="dot" onclick="currentSlide(0)"></div>
-                        <div class="dot" onclick="currentSlide(1)"></div>
-                        <div class="dot" onclick="currentSlide(2)"></div>
-                    </div>
+                    <div class="slider-dots"><div class="dot" onclick="currentSlide(0)"></div><div class="dot" onclick="currentSlide(1)"></div><div class="dot" onclick="currentSlide(2)"></div></div>
                 </div>
 
-                <!-- STATISTIK SECTION -->
                 <div class="stats-section">
-                    <div class="stat-card">
-                        <i class="fas fa-users"></i>
-                        <span class="stat-number" id="statPendaftar">15,234</span>
-                        <p>Pendaftar Aktif</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-university"></i>
-                        <span class="stat-number">42</span>
-                        <p>Kampus Poltekkes</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-chalkboard-user"></i>
-                        <span class="stat-number">500+</span>
-                        <p>Dosen Profesional</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-hospital"></i>
-                        <span class="stat-number">500+</span>
-                        <p>RS Mitra Kerjasama</p>
-                    </div>
+                    <div class="stat-card"><i class="fas fa-users"></i><span class="stat-number" id="statPendaftar">15,234</span><p>Pendaftar Aktif</p></div>
+                    <div class="stat-card"><i class="fas fa-university"></i><span class="stat-number">42</span><p>Kampus Poltekkes</p></div>
+                    <div class="stat-card"><i class="fas fa-chalkboard-user"></i><span class="stat-number">500+</span><p>Dosen Profesional</p></div>
+                    <div class="stat-card"><i class="fas fa-hospital"></i><span class="stat-number">500+</span><p>RS Mitra Kerjasama</p></div>
                 </div>
 
-                <!-- PROGRAM UNGGULAN -->
                 <div class="program-section">
                     <h2 class="section-title"><i class="fas fa-star"></i> Program Studi Unggulan</h2>
                     <div class="program-cards">
-                        <div class="program-card">
-                            <i class="fas fa-stethoscope"></i>
-                            <h4>D3 Keperawatan</h4>
-                            <p>Akreditasi Unggul</p>
-                        </div>
-                        <div class="program-card">
-                            <i class="fas fa-apple-alt"></i>
-                            <h4>D3 Gizi</h4>
-                            <p>Akreditasi Unggul</p>
-                        </div>
-                        <div class="program-card">
-                            <i class="fas fa-capsules"></i>
-                            <h4>D3 Farmasi</h4>
-                            <p>Akreditasi Unggul</p>
-                        </div>
-                        <div class="program-card">
-                            <i class="fas fa-tooth"></i>
-                            <h4>D4 Kesehatan Gigi</h4>
-                            <p>Akreditasi Unggul</p>
-                        </div>
-                        <div class="program-card">
-                            <i class="fas fa-microscope"></i>
-                            <h4>D4 Teknologi Lab Medis</h4>
-                            <p>Akreditasi Unggul</p>
-                        </div>
+                        <div class="program-card"><i class="fas fa-stethoscope"></i><h4>D3 Keperawatan</h4><p>Akreditasi Unggul</p></div>
+                        <div class="program-card"><i class="fas fa-apple-alt"></i><h4>D3 Gizi</h4><p>Akreditasi Unggul</p></div>
+                        <div class="program-card"><i class="fas fa-capsules"></i><h4>D3 Farmasi</h4><p>Akreditasi Unggul</p></div>
+                        <div class="program-card"><i class="fas fa-tooth"></i><h4>D4 Kesehatan Gigi</h4><p>Akreditasi Unggul</p></div>
+                        <div class="program-card"><i class="fas fa-microscope"></i><h4>D4 Teknologi Lab Medis</h4><p>Akreditasi Unggul</p></div>
                     </div>
                 </div>
 
-                <!-- TIMELINE PENDAFTARAN -->
                 <div class="timeline-section">
                     <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Timeline Pendaftaran 2026</h2>
                     <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-calendar-plus"></i></div>
-                            <div class="timeline-date">1 Jan - 30 Mar 2026</div>
-                            <div class="timeline-title">Gelombang 1</div>
-                            <div class="timeline-desc">Pendaftaran & Ujian</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-calendar-alt"></i></div>
-                            <div class="timeline-date">1 Apr - 30 Jun 2026</div>
-                            <div class="timeline-title">Gelombang 2</div>
-                            <div class="timeline-desc">Pendaftaran & Ujian</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-bullhorn"></i></div>
-                            <div class="timeline-date">5 Agustus 2026</div>
-                            <div class="timeline-title">Pengumuman</div>
-                            <div class="timeline-desc">Hasil Seleksi</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon"><i class="fas fa-chalkboard-user"></i></div>
-                            <div class="timeline-date">1 September 2026</div>
-                            <div class="timeline-title">Mulai Kuliah</div>
-                            <div class="timeline-desc">Tahun Akademik Baru</div>
-                        </div>
+                        <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-calendar-plus"></i></div><div class="timeline-date">1 Jan - 30 Mar 2026</div><div class="timeline-title">Gelombang 1</div><div class="timeline-desc">Pendaftaran & Ujian</div></div>
+                        <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-calendar-alt"></i></div><div class="timeline-date">1 Apr - 30 Jun 2026</div><div class="timeline-title">Gelombang 2</div><div class="timeline-desc">Pendaftaran & Ujian</div></div>
+                        <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-bullhorn"></i></div><div class="timeline-date">5 Agustus 2026</div><div class="timeline-title">Pengumuman</div><div class="timeline-desc">Hasil Seleksi</div></div>
+                        <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-chalkboard-user"></i></div><div class="timeline-date">1 September 2026</div><div class="timeline-title">Mulai Kuliah</div><div class="timeline-desc">Tahun Akademik Baru</div></div>
                     </div>
                 </div>
 
-                <!-- BERITA TERBARU -->
                 <div class="news-section">
                     <h2 class="section-title"><i class="fas fa-newspaper"></i> Berita Terbaru</h2>
                     <div class="news-grid">
-                        <div class="news-card">
-                            <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=180&fit=crop');"></div>
-                            <div class="news-content">
-                                <div class="news-date"><i class="far fa-calendar-alt"></i> 15 Maret 2026</div>
-                                <div class="news-title">Pendaftaran Gelombang 1 Dibuka!</div>
-                                <div class="news-excerpt">Segera daftarkan diri anda sebelum kuota habis...</div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b53?w=400&h=180&fit=crop');"></div>
-                            <div class="news-content">
-                                <div class="news-date"><i class="far fa-calendar-alt"></i> 10 Maret 2026</div>
-                                <div class="news-title">Beasiswa Prestasi Tersedia</div>
-                                <div class="news-excerpt">Dapatkan beasiswa hingga 100% untuk 1000 pendaftar terbaik...</div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=180&fit=crop');"></div>
-                            <div class="news-content">
-                                <div class="news-date"><i class="far fa-calendar-alt"></i> 5 Maret 2026</div>
-                                <div class="news-title">Webinar SPMB 2026</div>
-                                <div class="news-excerpt">Ikuti webinar gratis tentang tips lolos seleksi...</div>
-                            </div>
-                        </div>
+                        <div class="news-card"><div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=180&fit=crop');"></div><div class="news-content"><div class="news-date"><i class="far fa-calendar-alt"></i> 15 Maret 2026</div><div class="news-title">Pendaftaran Gelombang 1 Dibuka!</div><div class="news-excerpt">Segera daftarkan diri anda sebelum kuota habis...</div></div></div>
+                        <div class="news-card"><div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b53?w=400&h=180&fit=crop');"></div><div class="news-content"><div class="news-date"><i class="far fa-calendar-alt"></i> 10 Maret 2026</div><div class="news-title">Beasiswa Prestasi Tersedia</div><div class="news-excerpt">Dapatkan beasiswa hingga 100% untuk 1000 pendaftar terbaik...</div></div></div>
+                        <div class="news-card"><div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=180&fit=crop');"></div><div class="news-content"><div class="news-date"><i class="far fa-calendar-alt"></i> 5 Maret 2026</div><div class="news-title">Webinar SPMB 2026</div><div class="news-excerpt">Ikuti webinar gratis tentang tips lolos seleksi...</div></div></div>
                     </div>
                 </div>
 
-                <!-- TESTIMONI -->
                 <div class="testimoni-section">
                     <h2 class="section-title"><i class="fas fa-comment-dots"></i> Testimoni Alumni</h2>
                     <div class="testimoni-grid">
-                        <div class="testimoni-card">
-                            <div class="testimoni-avatar"><i class="fas fa-user-md"></i></div>
-                            <div class="testimoni-text">"Kuliah di Poltekkes Kemenkes memberikan pengalaman luar biasa. Dosen-dosennya sangat profesional dan fasilitasnya lengkap."</div>
-                            <div class="testimoni-name">dr. Sarah Wijaya</div>
-                            <div class="testimoni-role">Alumni Keperawatan, Sekarang Dokter di RSUP Fatmawati</div>
-                        </div>
-                        <div class="testimoni-card">
-                            <div class="testimoni-avatar"><i class="fas fa-user-nurse"></i></div>
-                            <div class="testimoni-text">"Berkat pendidikan di Poltekkes, saya bisa langsung bekerja di rumah sakit ternama setelah lulus."</div>
-                            <div class="testimoni-name">Nurul Aini, S.Kep</div>
-                            <div class="testimoni-role">Perawat di RS Siloam</div>
-                        </div>
-                        <div class="testimoni-card">
-                            <div class="testimoni-avatar"><i class="fas fa-user-graduate"></i></div>
-                            <div class="testimoni-text">"Proses pendaftaran mudah, biaya terjangkau, dan kualitas pendidikan sangat baik."</div>
-                            <div class="testimoni-name">Ahmad Fauzi, S.Farm</div>
-                            <div class="testimoni-role">Apoteker di Kimia Farma</div>
-                        </div>
+                        <div class="testimoni-card"><div class="testimoni-avatar"><i class="fas fa-user-md"></i></div><div class="testimoni-text">"Kuliah di Poltekkes Kemenkes memberikan pengalaman luar biasa. Dosen-dosennya sangat profesional dan fasilitasnya lengkap."</div><div class="testimoni-name">dr. Sarah Wijaya</div><div class="testimoni-role">Alumni Keperawatan</div></div>
+                        <div class="testimoni-card"><div class="testimoni-avatar"><i class="fas fa-user-nurse"></i></div><div class="testimoni-text">"Berkat pendidikan di Poltekkes, saya bisa langsung bekerja di rumah sakit ternama setelah lulus."</div><div class="testimoni-name">Nurul Aini, S.Kep</div><div class="testimoni-role">Perawat RS Siloam</div></div>
+                        <div class="testimoni-card"><div class="testimoni-avatar"><i class="fas fa-user-graduate"></i></div><div class="testimoni-text">"Proses pendaftaran mudah, biaya terjangkau, dan kualitas pendidikan sangat baik."</div><div class="testimoni-name">Ahmad Fauzi, S.Farm</div><div class="testimoni-role">Apoteker Kimia Farma</div></div>
                     </div>
                 </div>
 
-                <!-- FAQ SECTION -->
                 <div class="faq-section">
                     <h2 class="section-title"><i class="fas fa-question-circle"></i> Pertanyaan Umum (FAQ)</h2>
                     <div class="faq-grid">
-                        <div class="faq-item" onclick="this.classList.toggle('active')">
-                            <div class="faq-question">Bagaimana cara mendaftar? <i class="fas fa-chevron-down"></i></div>
-                            <div class="faq-answer">Klik tombol "Daftar Sekarang", isi formulir pendaftaran dengan lengkap, lalu submit. Anda akan mendapatkan email konfirmasi.</div>
-                        </div>
-                        <div class="faq-item" onclick="this.classList.toggle('active')">
-                            <div class="faq-question">Berapa biaya pendaftaran? <i class="fas fa-chevron-down"></i></div>
-                            <div class="faq-answer">Pendaftaran SPMB Poltekkes Kemenkes GRATIS! Tidak dipungut biaya apapun.</div>
-                        </div>
-                        <div class="faq-item" onclick="this.classList.toggle('active')">
-                            <div class="faq-question">Apa saja persyaratannya? <i class="fas fa-chevron-down"></i></div>
-                            <div class="faq-answer">Ijazah SMA/SMK/MA sederajat, KTP, Pas foto, dan mengisi formulir pendaftaran online.</div>
-                        </div>
-                        <div class="faq-item" onclick="this.classList.toggle('active')">
-                            <div class="faq-question">Kapan jadwal ujian? <i class="fas fa-chevron-down"></i></div>
-                            <div class="faq-answer">Ujian gelombang 1: Maret 2026, Gelombang 2: Juni 2026. Info detail via email.</div>
-                        </div>
+                        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-question">Bagaimana cara mendaftar? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Klik tombol "Daftar Sekarang", isi formulir pendaftaran dengan lengkap, lalu submit. Anda akan mendapatkan email konfirmasi.</div></div>
+                        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-question">Berapa biaya pendaftaran? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Pendaftaran SPMB Poltekkes Kemenkes GRATIS! Tidak dipungut biaya apapun.</div></div>
+                        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-question">Apa saja persyaratannya? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Ijazah SMA/SMK/MA sederajat, KTP, Pas foto, dan mengisi formulir pendaftaran online.</div></div>
+                        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-question">Kapan jadwal ujian? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Ujian gelombang 1: Maret 2026, Gelombang 2: Juni 2026. Info detail via email.</div></div>
                     </div>
                 </div>
             </div>
 
-                      <!-- HALAMAN INFORMASI - TEMA KESEHATAN -->
+            <!-- INFO SECTION (singkat agar tidak terlalu panjang) -->
             <div id="infoSection" class="section">
                 <div style="max-width: 1200px; margin: 0 auto;">
-                    <!-- Header Info -->
                     <div style="background: linear-gradient(135deg, #064e3b, #0d9488); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; color: white; text-align: center;">
-                        <i class="fas fa-info-circle" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Informasi Lengkap SPMB Poltekkes 2026</h1>
-                        <p style="opacity: 0.9; font-size: 0.95rem;">Semua informasi tentang pendaftaran, jadwal, biaya, dan persyaratan</p>
+                        <i class="fas fa-info-circle" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h1 style="font-size: 1.8rem;">Informasi Lengkap SPMB Poltekkes 2026</h1>
                     </div>
-
-                    <!-- Grid Informasi Utama -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                            <i class="fas fa-calendar-alt" style="font-size: 1.8rem; color: #0d9488; margin-bottom: 0.75rem;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.2rem; margin-bottom: 0.75rem;">Jadwal Pendaftaran</h3>
-                            <ul style="margin-top: 0; list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #334155;"><i class="fas fa-check-circle" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Gelombang 1: 1 Jan - 30 Mar 2026</li>
-                                <li style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #334155;"><i class="fas fa-check-circle" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Gelombang 2: 1 Apr - 30 Jun 2026</li>
-                                <li style="font-size: 0.9rem; color: #334155;"><i class="fas fa-check-circle" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Pengumuman: 5 Agustus 2026</li>
-                            </ul>
-                        </div>
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                            <i class="fas fa-money-bill-wave" style="font-size: 1.8rem; color: #0d9488; margin-bottom: 0.75rem;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.2rem; margin-bottom: 0.75rem;">Biaya Pendidikan</h3>
-                            <ul style="margin-top: 0; list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #334155;"><i class="fas fa-gem" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Pendaftaran: <strong>GRATIS</strong></li>
-                                <li style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #334155;"><i class="fas fa-gem" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> UKT: Rp 500.000 - Rp 5.000.000/semester</li>
-                                <li style="font-size: 0.9rem; color: #334155;"><i class="fas fa-gem" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Beasiswa: KIP Kuliah & Prestasi</li>
-                            </ul>
-                        </div>
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                            <i class="fas fa-file-alt" style="font-size: 1.8rem; color: #0d9488; margin-bottom: 0.75rem;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.2rem; margin-bottom: 0.75rem;">Persyaratan Umum</h3>
-                            <ul style="margin-top: 0; list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #334155;"><i class="fas fa-check-circle" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Ijazah SMA/SMK/MA sederajat</li>
-                                <li style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #334155;"><i class="fas fa-check-circle" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> KTP/SIM/Kartu Pelajar</li>
-                                <li style="font-size: 0.9rem; color: #334155;"><i class="fas fa-check-circle" style="color: #0d9488; width: 18px; font-size: 0.8rem;"></i> Pas foto 4x6 (2 lembar)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Tabel Program Studi -->
-                    <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fas fa-graduation-cap"></i> Program Studi & Daya Tampung</h3>
-                        <div style="overflow-x: auto;">
-                            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
-                                <thead>
-                                    <tr style="background: #064e3b; color: white;">
-                                        <th style="padding: 0.7rem; text-align: left;">Program Studi</th>
-                                        <th style="padding: 0.7rem; text-align: left;">Jenjang</th>
-                                        <th style="padding: 0.7rem; text-align: center;">Akreditasi</th>
-                                        <th style="padding: 0.7rem; text-align: center;">Daya Tampung</th>
-                                        <th style="padding: 0.7rem; text-align: center;">UKT/Min</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.7rem;">Keperawatan</td><td>D3</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">500</td><td style="text-align: center;">Rp1,2Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.7rem;">Farmasi</td><td>D3</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">400</td><td style="text-align: center;">Rp1,5Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.7rem;">Gizi</td><td>D3</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">350</td><td style="text-align: center;">Rp1,2Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.7rem;">Kesehatan Lingkungan</td><td>D3</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">300</td><td style="text-align: center;">Rp1,0Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.7rem;">Kebidanan</td><td>D4</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">400</td><td style="text-align: center;">Rp1,8Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.7rem;">Teknologi Laboratorium Medis</td><td>D4</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">350</td><td style="text-align: center;">Rp2,0Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.7rem;">Manajemen Informasi Kesehatan</td><td>D4</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">250</td><td style="text-align: center;">Rp1,5Jt</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.7rem;">Kesehatan Gigi</td><td>D4</td><td style="text-align: center;">Unggul</td><td style="text-align: center;">250</td><td style="text-align: center;">Rp1,8Jt</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Timeline Sederhana -->
-                    <div style="background: #f0fdf4; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 2rem; border: 1px solid #dcfce7;">
-                        <h3 style="color: #064e3b; margin-bottom: 1rem; font-size: 1.1rem;"><i class="fas fa-timeline"></i> Timeline Seleksi 2026</h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
-                            <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.8rem; background: white; border-radius: 0.5rem; border: 1px solid #dcfce7;">
-                                <i class="fas fa-calendar-plus" style="font-size: 1.2rem; color: #0d9488;"></i>
-                                <p style="margin: 0.3rem 0 0; font-size: 0.75rem;"><strong>Jan-Mar</strong><br>Gelombang 1</p>
-                            </div>
-                            <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.8rem; background: white; border-radius: 0.5rem; border: 1px solid #dcfce7;">
-                                <i class="fas fa-calendar-alt" style="font-size: 1.2rem; color: #0d9488;"></i>
-                                <p style="margin: 0.3rem 0 0; font-size: 0.75rem;"><strong>Apr-Jun</strong><br>Gelombang 2</p>
-                            </div>
-                            <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.8rem; background: white; border-radius: 0.5rem; border: 1px solid #dcfce7;">
-                                <i class="fas fa-pen" style="font-size: 1.2rem; color: #0d9488;"></i>
-                                <p style="margin: 0.3rem 0 0; font-size: 0.75rem;"><strong>Juli</strong><br>Ujian Mandiri</p>
-                            </div>
-                            <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.8rem; background: white; border-radius: 0.5rem; border: 1px solid #dcfce7;">
-                                <i class="fas fa-bullhorn" style="font-size: 1.2rem; color: #0d9488;"></i>
-                                <p style="margin: 0.3rem 0 0; font-size: 0.75rem;"><strong>5 Agustus</strong><br>Pengumuman</p>
-                            </div>
-                            <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.8rem; background: white; border-radius: 0.5rem; border: 1px solid #dcfce7;">
-                                <i class="fas fa-chalkboard-user" style="font-size: 1.2rem; color: #0d9488;"></i>
-                                <p style="margin: 0.3rem 0 0; font-size: 0.75rem;"><strong>1 Sep</strong><br>Mulai Kuliah</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Beasiswa & Kampus -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                         <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; border: 1px solid #e2e8f0;">
-                            <i class="fas fa-hand-holding-heart" style="font-size: 1.5rem; color: #0d9488;"></i>
-                            <h3 style="color: #064e3b; font-size: 1rem; margin: 0.5rem 0;">Beasiswa Tersedia</h3>
-                            <ul style="margin-left: 1rem; font-size: 0.85rem; color: #334155;">
-                                <li>KIP Kuliah</li><li>Beasiswa Prestasi</li><li>Beasiswa Bakti Kesehatan</li><li>Beasiswa Daerah 3T</li>
-                            </ul>
+                            <i class="fas fa-calendar-alt" style="font-size: 1.8rem; color: #0d9488;"></i>
+                            <h3 style="color: #064e3b;">Jadwal Pendaftaran</h3>
+                            <ul><li>Gelombang 1: 1 Jan - 30 Mar 2026</li><li>Gelombang 2: 1 Apr - 30 Jun 2026</li><li>Pengumuman: 5 Agustus 2026</li></ul>
                         </div>
                         <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; border: 1px solid #e2e8f0;">
-                            <i class="fas fa-building" style="font-size: 1.5rem; color: #0d9488;"></i>
-                            <h3 style="color: #064e3b; font-size: 1rem; margin: 0.5rem 0;">Kampus Poltekkes</h3>
-                            <ul style="margin-left: 1rem; font-size: 0.85rem; color: #334155;">
-                                <li>Jakarta, Bandung, Semarang</li><li>Surabaya, Medan, Palembang</li><li>Makassar, Denpasar, Manado</li><li>+30 kampus lainnya</li>
-                            </ul>
+                            <i class="fas fa-money-bill-wave" style="font-size: 1.8rem; color: #0d9488;"></i>
+                            <h3 style="color: #064e3b;">Biaya Pendidikan</h3>
+                            <ul><li>Pendaftaran: GRATIS</li><li>UKT: Rp500.000 - Rp5.000.000</li><li>Beasiswa: KIP Kuliah & Prestasi</li></ul>
                         </div>
                         <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; border: 1px solid #e2e8f0;">
-                            <i class="fas fa-briefcase" style="font-size: 1.5rem; color: #0d9488;"></i>
-                            <h3 style="color: #064e3b; font-size: 1rem; margin: 0.5rem 0;">Peluang Karir</h3>
-                            <ul style="margin-left: 1rem; font-size: 0.85rem; color: #334155;">
-                                <li>RS Pemerintah/Swasta</li><li>Puskesmas & Klinik</li><li>Industri Farmasi</li><li>Dinas Kesehatan</li>
-                            </ul>
+                            <i class="fas fa-file-alt" style="font-size: 1.8rem; color: #0d9488;"></i>
+                            <h3 style="color: #064e3b;">Persyaratan</h3>
+                            <ul><li>Ijazah SMA/SMK/MA</li><li>KTP/Kartu Pelajar</li><li>Pas foto 4x6</li></ul>
                         </div>
                     </div>
-
-                    <!-- Download Dokumen -->
-                    <div style="background: #f8fafc; border-radius: 0.75rem; padding: 1.25rem; text-align: center; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; font-size: 1rem;"><i class="fas fa-download"></i> Dokumen Pendukung</h3>
-                        <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 0.8rem;">
-                            <button onclick="showNotification('Panduan SPMB 2026 akan segera tersedia')" style="background: #0d9488; color: white; padding: 0.5rem 1.2rem; border-radius: 2rem; border: none; font-size: 0.8rem; cursor: pointer;"><i class="fas fa-file-pdf"></i> Panduan SPMB</button>
-                            <button onclick="showNotification('Formulir pendaftaran dapat diisi online')" style="background: #064e3b; color: white; padding: 0.5rem 1.2rem; border-radius: 2rem; border: none; font-size: 0.8rem; cursor: pointer;"><i class="fas fa-file-word"></i> Formulir</button>
-                            <button onclick="showNotification('Jadwal ujian akan diinfokan lebih lanjut')" style="background: #334155; color: white; padding: 0.5rem 1.2rem; border-radius: 2rem; border: none; font-size: 0.8rem; cursor: pointer;"><i class="fas fa-calendar"></i> Jadwal Ujian</button>
-                        </div>
-                    </div>
-
-                    <!-- Tombol Aksi -->
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <button onclick="showPage('registerPage')" style="background: #0d9488; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-file-alt"></i> Daftar Sekarang</button>
-                        <button onclick="showDashboardSection('jalurSection')" style="background: #064e3b; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-road"></i> Jalur Pendaftaran</button>
-                        <button onclick="showDashboardSection('bantuanSection')" style="background: #334155; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-question-circle"></i> Pusat Bantuan</button>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                        <button onclick="showPage('registerPage')" style="background: #0d9488; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; cursor: pointer;">Daftar Sekarang</button>
+                        <button onclick="showDashboardSection('jalurSection')" style="background: #064e3b; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; cursor: pointer;">Jalur Pendaftaran</button>
                     </div>
                 </div>
             </div>
 
-                        <!-- HALAMAN BANTUAN - TEMA KESEHATAN -->
-            <div id="bantuanSection" class="section">
-                <div style="max-width: 1000px; margin: 0 auto;">
-                    <!-- Header Bantuan -->
-                    <div style="background: linear-gradient(135deg, #064e3b, #0d9488); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; color: white; text-align: center;">
-                        <i class="fas fa-headset" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Pusat Bantuan</h1>
-                        <p style="opacity: 0.9; font-size: 0.95rem;">Kami siap membantu Anda. Pilih metode kontak di bawah ini</p>
-                    </div>
-
-                    <!-- Kontak Utama -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; text-align: center; border: 1px solid #e2e8f0; transition: all 0.3s;">
-                            <i class="fas fa-phone-alt" style="font-size: 2rem; color: #0d9488;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.1rem; margin: 0.75rem 0 0.5rem;">Call Center</h3>
-                            <p style="font-size: 0.9rem; color: #334155;">1500-567</p>
-                            <p style="font-size: 0.75rem; color: #64748b;">24 Jam Nonstop</p>
-                            <button onclick="showNotification('Menghubungi 1500-567')" style="margin-top: 0.75rem; background: #f0fdf4; color: #0d9488; padding: 0.4rem 1rem; border-radius: 2rem; border: 1px solid #dcfce7; font-size: 0.75rem; cursor: pointer;">Hubungi</button>
-                        </div>
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; text-align: center; border: 1px solid #e2e8f0;">
-                            <i class="fas fa-envelope" style="font-size: 2rem; color: #0d9488;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.1rem; margin: 0.75rem 0 0.5rem;">Email Resmi</h3>
-                            <p style="font-size: 0.85rem; color: #334155;">spmb@poltekkes.kemkes.go.id</p>
-                            <p style="font-size: 0.75rem; color: #64748b;">Balas dalam 1x24 jam</p>
-                            <button onclick="window.location.href='mailto:spmb@poltekkes.kemkes.go.id'" style="margin-top: 0.75rem; background: #f0fdf4; color: #0d9488; padding: 0.4rem 1rem; border-radius: 2rem; border: 1px solid #dcfce7; font-size: 0.75rem; cursor: pointer;">Kirim Email</button>
-                        </div>
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; text-align: center; border: 1px solid #e2e8f0;">
-                            <i class="fab fa-whatsapp" style="font-size: 2rem; color: #25D366;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.1rem; margin: 0.75rem 0 0.5rem;">WhatsApp</h3>
-                            <p style="font-size: 0.9rem; color: #334155;">0811-888-5678</p>
-                            <p style="font-size: 0.75rem; color: #64748b;">Senin-Jumat 08.00-16.00</p>
-                            <button onclick="showNotification('WhatsApp: 0811-888-5678')" style="margin-top: 0.75rem; background: #f0fdf4; color: #0d9488; padding: 0.4rem 1rem; border-radius: 2rem; border: 1px solid #dcfce7; font-size: 0.75rem; cursor: pointer;">Chat Now</button>
-                        </div>
-                        <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; text-align: center; border: 1px solid #e2e8f0;">
-                            <i class="fas fa-comments" style="font-size: 2rem; color: #0d9488;"></i>
-                            <h3 style="color: #064e3b; font-size: 1.1rem; margin: 0.75rem 0 0.5rem;">Live Chat</h3>
-                            <p style="font-size: 0.9rem; color: #334155;">Customer Service</p>
-                            <p style="font-size: 0.75rem; color: #64748b;">Senin-Jumat 08.00-16.00</p>
-                            <button onclick="showNotification('Live chat akan segera terhubung')" style="margin-top: 0.75rem; background: #f0fdf4; color: #0d9488; padding: 0.4rem 1rem; border-radius: 2rem; border: 1px solid #dcfce7; font-size: 0.75rem; cursor: pointer;">Mulai Chat</button>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Populer -->
-                    <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-question-circle"></i> Pertanyaan yang Sering Diajukan (FAQ)</h3>
-                        
-                        <div style="border-bottom: 1px solid #e2e8f0; padding: 0.8rem 0; cursor: pointer;" onclick="this.classList.toggle('active'); this.querySelector('.faq-answer-panel').style.display = this.classList.contains('active') ? 'block' : 'none';">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <p style="font-weight: 600; color: #064e3b; font-size: 0.9rem;"><i class="fas fa-chevron-right" style="color: #0d9488; font-size: 0.7rem;"></i> Bagaimana cara mendaftar SPMB Poltekkes?</p>
-                                <i class="fas fa-chevron-down" style="color: #64748b; font-size: 0.8rem;"></i>
-                            </div>
-                            <div class="faq-answer-panel" style="display: none; margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.85rem;">
-                                Pendaftaran dilakukan secara online melalui website resmi SPMB Poltekkes. Klik tombol "Daftar" di halaman utama, isi formulir pendaftaran dengan lengkap, upload dokumen yang diperlukan, lalu submit. Pendaftaran GRATIS!
-                            </div>
-                        </div>
-                        
-                        <div style="border-bottom: 1px solid #e2e8f0; padding: 0.8rem 0; cursor: pointer;" onclick="this.classList.toggle('active'); this.querySelector('.faq-answer-panel').style.display = this.classList.contains('active') ? 'block' : 'none';">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <p style="font-weight: 600; color: #064e3b; font-size: 0.9rem;"><i class="fas fa-chevron-right" style="color: #0d9488; font-size: 0.7rem;"></i> Apa saja persyaratan pendaftaran?</p>
-                                <i class="fas fa-chevron-down" style="color: #64748b; font-size: 0.8rem;"></i>
-                            </div>
-                            <div class="faq-answer-panel" style="display: none; margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.85rem;">
-                                Persyaratan: Ijazah SMA/SMK/MA sederajat, KTP/Kartu Pelajar, Pas foto terbaru 4x6 (2 lembar), dan mengisi formulir pendaftaran online. Untuk jalur tertentu mungkin ada tambahan persyaratan khusus.
-                            </div>
-                        </div>
-                        
-                        <div style="border-bottom: 1px solid #e2e8f0; padding: 0.8rem 0; cursor: pointer;" onclick="this.classList.toggle('active'); this.querySelector('.faq-answer-panel').style.display = this.classList.contains('active') ? 'block' : 'none';">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <p style="font-weight: 600; color: #064e3b; font-size: 0.9rem;"><i class="fas fa-chevron-right" style="color: #0d9488; font-size: 0.7rem;"></i> Berapa biaya pendaftaran SPMB?</p>
-                                <i class="fas fa-chevron-down" style="color: #64748b; font-size: 0.8rem;"></i>
-                            </div>
-                            <div class="faq-answer-panel" style="display: none; margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.85rem;">
-                                Pendaftaran SPMB Poltekkes Kemenkes GRATIS! Tidak dipungut biaya apapun. Untuk jalur Mandiri mungkin ada biaya administrasi yang akan diumumkan kemudian.
-                            </div>
-                        </div>
-                        
-                        <div style="border-bottom: 1px solid #e2e8f0; padding: 0.8rem 0; cursor: pointer;" onclick="this.classList.toggle('active'); this.querySelector('.faq-answer-panel').style.display = this.classList.contains('active') ? 'block' : 'none';">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <p style="font-weight: 600; color: #064e3b; font-size: 0.9rem;"><i class="fas fa-chevron-right" style="color: #0d9488; font-size: 0.7rem;"></i> Kapan jadwal ujian seleksi?</p>
-                                <i class="fas fa-chevron-down" style="color: #64748b; font-size: 0.8rem;"></i>
-                            </div>
-                            <div class="faq-answer-panel" style="display: none; margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.85rem;">
-                                Ujian Gelombang 1: Maret 2026, Gelombang 2: Juni 2026, Ujian Mandiri: Juli 2026. Informasi detail jadwal akan dikirim melalui email pendaftar.
-                            </div>
-                        </div>
-                        
-                        <div style="border-bottom: 1px solid #e2e8f0; padding: 0.8rem 0; cursor: pointer;" onclick="this.classList.toggle('active'); this.querySelector('.faq-answer-panel').style.display = this.classList.contains('active') ? 'block' : 'none';">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <p style="font-weight: 600; color: #064e3b; font-size: 0.9rem;"><i class="fas fa-chevron-right" style="color: #0d9488; font-size: 0.7rem;"></i> Lupa password, bagaimana cara mengatasinya?</p>
-                                <i class="fas fa-chevron-down" style="color: #64748b; font-size: 0.8rem;"></i>
-                            </div>
-                            <div class="faq-answer-panel" style="display: none; margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.85rem;">
-                                Klik "Lupa Password" pada halaman login, masukkan email pendaftaran, maka instruksi reset password akan dikirim ke email Anda. Jika masih terkendala, hubungi call center 1500-567.
-                            </div>
-                        </div>
-                        
-                        <div style="padding: 0.8rem 0; cursor: pointer;" onclick="this.classList.toggle('active'); this.querySelector('.faq-answer-panel').style.display = this.classList.contains('active') ? 'block' : 'none';">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <p style="font-weight: 600; color: #064e3b; font-size: 0.9rem;"><i class="fas fa-chevron-right" style="color: #0d9488; font-size: 0.7rem;"></i> Apakah ada beasiswa untuk mahasiswa kurang mampu?</p>
-                                <i class="fas fa-chevron-down" style="color: #64748b; font-size: 0.8rem;"></i>
-                            </div>
-                            <div class="faq-answer-panel" style="display: none; margin-top: 0.5rem; padding-left: 1.2rem; color: #475569; font-size: 0.85rem;">
-                                Ada. Poltekkes menyediakan KIP Kuliah, Beasiswa Prestasi, Beasiswa Bakti Kesehatan, dan Beasiswa Daerah 3T. Silakan pilih opsi beasiswa saat mengisi formulir pendaftaran.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Alamat & Peta -->
-                    <div style="background: #f8fafc; border-radius: 0.75rem; padding: 1.25rem; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; font-size: 1rem; margin-bottom: 0.8rem;"><i class="fas fa-map-marker-alt"></i> Kantor Pusat SPMB Poltekkes</h3>
-                        <p style="font-size: 0.85rem; color: #334155; margin-bottom: 0.3rem;"><i class="fas fa-building" style="color: #0d9488; width: 20px;"></i> Gedung Kementerian Kesehatan RI Lantai 5</p>
-                        <p style="font-size: 0.85rem; color: #334155; margin-bottom: 0.3rem;"><i class="fas fa-road" style="color: #0d9488; width: 20px;"></i> Jl. Hang Jebat III, Kebayoran Baru</p>
-                        <p style="font-size: 0.85rem; color: #334155; margin-bottom: 0.3rem;"><i class="fas fa-city" style="color: #0d9488; width: 20px;"></i> Jakarta Selatan 12120</p>
-                        <div style="margin-top: 1rem; background: #e2e8f0; height: 150px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: #64748b;">
-                            <i class="fas fa-map" style="font-size: 2rem; margin-right: 0.5rem;"></i> Peta Lokasi (Google Maps)
-                        </div>
-                    </div>
-
-                    <!-- Jam Operasional -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-                        <div style="background: #f0fdf4; border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid #dcfce7;">
-                            <i class="fas fa-clock" style="font-size: 1.3rem; color: #0d9488;"></i>
-                            <p style="font-size: 0.8rem; color: #334155; margin-top: 0.3rem;"><strong>Senin - Kamis</strong><br>08.00 - 16.00 WIB</p>
-                        </div>
-                        <div style="background: #f0fdf4; border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid #dcfce7;">
-                            <i class="fas fa-clock" style="font-size: 1.3rem; color: #0d9488;"></i>
-                            <p style="font-size: 0.8rem; color: #334155; margin-top: 0.3rem;"><strong>Jumat</strong><br>08.00 - 15.30 WIB</p>
-                        </div>
-                        <div style="background: #f0fdf4; border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid #dcfce7;">
-                            <i class="fas fa-clock" style="font-size: 1.3rem; color: #0d9488;"></i>
-                            <p style="font-size: 0.8rem; color: #334155; margin-top: 0.3rem;"><strong>Sabtu - Minggu</strong><br>Libur</p>
-                        </div>
-                        <div style="background: #f0fdf4; border-radius: 0.75rem; padding: 1rem; text-align: center; border: 1px solid #dcfce7;">
-                            <i class="fas fa-phone-alt" style="font-size: 1.3rem; color: #0d9488;"></i>
-                            <p style="font-size: 0.8rem; color: #334155; margin-top: 0.3rem;"><strong>Call Center 24 Jam</strong><br>1500-567 (Setiap Hari)</p>
-                        </div>
-                    </div>
-
-                    <!-- Tombol Aksi -->
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <button onclick="showPage('registerPage')" style="background: #0d9488; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-file-alt"></i> Daftar Sekarang</button>
-                        <button onclick="showDashboardSection('infoSection')" style="background: #064e3b; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-info-circle"></i> Info Pendaftaran</button>
-                        <button onclick="showDashboardSection('jalurSection')" style="background: #334155; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-road"></i> Jalur Pendaftaran</button>
-                    </div>
-                </div>
-            </div>
-
-                        <!-- HALAMAN INFO JALUR PENDAFTARAN -->
+            <!-- JALUR SECTION -->
             <div id="jalurSection" class="section">
-                <div class="card info-card" style="max-width: 1200px; margin: 0 auto;">
-                    <h3 style="font-size: 1.8rem; text-align: center;"><i class="fas fa-road"></i> Jalur Pendaftaran SPMB Poltekkes 2026</h3>
-                    <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Pilih jalur yang sesuai dengan prestasi dan kemampuan Anda</p>
-                    
-                    <!-- Jalur SNBP -->
-                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 1.5rem; padding: 2rem; margin-bottom: 2rem; color: white;">
-                        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
-                            <i class="fas fa-trophy" style="font-size: 2.5rem;"></i>
-                            <h2 style="font-size: 1.8rem; margin: 0;">Jalur SNBP (Seleksi Nasional Berdasarkan Prestasi)</h2>
-                        </div>
-                        <p>Seleksi berdasarkan nilai rapor dan prestasi akademik/non-akademik tanpa ujian tulis.</p>
-                        
-                        <div style="background: rgba(255,255,255,0.15); border-radius: 1rem; padding: 1.5rem; margin-top: 1rem;">
-                            <h3><i class="fas fa-clipboard-list"></i> Persyaratan SNBP:</h3>
-                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                <li>✓ Memiliki nilai rapor semester 1-5 minimal 85</li>
-                                <li>✓ Tidak pernah tinggal kelas</li>
-                                <li>✓ Memiliki prestasi minimal tingkat kabupaten (opsional tapi nilai plus)</li>
-                                <li>✓ Diserahkan melalui sekolah asal (mekanisme afirmasi)</li>
-                                <li>✓ Memilih maksimal 2 program studi</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-calendar-alt"></i>
-                                <p><strong>Pendaftaran</strong><br>1 Jan - 28 Feb 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-file-alt"></i>
-                                <p><strong>Pengumuman</strong><br>15 Maret 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-users"></i>
-                                <p><strong>Kuota</strong><br>30% dari total penerimaan</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-money-bill-wave"></i>
-                                <p><strong>Biaya</strong><br>GRATIS</p>
-                            </div>
-                        </div>
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <div style="background: linear-gradient(135deg, #064e3b, #0d9488); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; color: white; text-align: center;">
+                        <i class="fas fa-road" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h1 style="font-size: 1.8rem;">Jalur Pendaftaran SPMB Poltekkes 2026</h1>
                     </div>
-                    
-                    <!-- Jalur UTBK -->
-                    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 1.5rem; padding: 2rem; margin-bottom: 2rem; color: white;">
-                        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
-                            <i class="fas fa-pen-fancy" style="font-size: 2.5rem;"></i>
-                            <h2 style="font-size: 1.8rem; margin: 0;">Jalur UTBK (Seleksi Berdasarkan Ujian Tulis)</h2>
-                        </div>
-                        <p>Seleksi berdasarkan hasil Ujian Tulis Berbasis Komputer (UTBK) yang diadakan secara nasional.</p>
-                        
-                        <div style="background: rgba(255,255,255,0.15); border-radius: 1rem; padding: 1.5rem; margin-top: 1rem;">
-                            <h3><i class="fas fa-clipboard-list"></i> Persyaratan UTBK:</h3>
-                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                <li>✓ Lulusan SMA/SMK/MA atau yang sederajat</li>
-                                <li>✓ Mendaftar dan mengikuti UTBK di pusat yang ditentukan</li>
-                                <li>✓ Nilai UTBK minimal 500 (skala 1000)</li>
-                                <li>✓ Memilih maksimal 3 program studi</li>
-                                <li>✓ Kesehatan jasmani dan rohani yang baik</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-calendar-alt"></i>
-                                <p><strong>Pendaftaran UTBK</strong><br>1 Mar - 15 Apr 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-laptop"></i>
-                                <p><strong>Pelaksanaan UTBK</strong><br>1-20 Mei 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-file-alt"></i>
-                                <p><strong>Pengumuman</strong><br>5 Agustus 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-users"></i>
-                                <p><strong>Kuota</strong><br>50% dari total penerimaan</p>
-                            </div>
-                        </div>
-                        
-                        <div style="background: rgba(255,255,255,0.2); border-radius: 0.8rem; padding: 1rem; margin-top: 1rem;">
-                            <i class="fas fa-info-circle"></i> <strong>Materi UTBK:</strong> Tes Potensi Skolastik (TPS), Literasi Bahasa Indonesia & Inggris, dan Penalaran Matematika
-                        </div>
+                    <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1rem; border-left: 5px solid #0d9488;">
+                        <h3 style="color: #064e3b;">📌 SNBP (Seleksi Nasional Berdasarkan Prestasi)</h3>
+                        <p>Berdasarkan nilai rapor dan prestasi. Pendaftaran: 1 Jan - 28 Feb 2026. Kuota 30%.</p>
                     </div>
-                    
-                    <!-- Jalur Mandiri -->
-                    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 1.5rem; padding: 2rem; margin-bottom: 2rem; color: #1e293b;">
-                        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
-                            <i class="fas fa-user-graduate" style="font-size: 2.5rem;"></i>
-                            <h2 style="font-size: 1.8rem; margin: 0; color: #1e293b;">Jalur Mandiri (Seleksi Khusus Poltekkes)</h2>
-                        </div>
-                        <p>Seleksi yang diselenggarakan secara mandiri oleh Poltekkes Kemenkes dengan ujian sendiri.</p>
-                        
-                        <div style="background: rgba(255,255,255,0.5); border-radius: 1rem; padding: 1.5rem; margin-top: 1rem;">
-                            <h3><i class="fas fa-clipboard-list"></i> Persyaratan Mandiri:</h3>
-                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                <li>✓ Lulusan SMA/SMK/MA tahun 2024, 2025, atau 2026</li>
-                                <li>✓ Mengisi formulir pendaftaran online</li>
-                                <li>✓ Mengikuti ujian tulis dan/atau wawancara</li>
-                                <li>✓ Membayar biaya pendaftaran (Rp 200.000)</li>
-                                <li>✓ Tidak lolos jalur SNBP/UTBK tetap bisa ikut</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                            <div style="background: rgba(255,255,255,0.5); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-calendar-alt"></i>
-                                <p><strong>Pendaftaran</strong><br>1 Apr - 30 Jun 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.5); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-pen"></i>
-                                <p><strong>Ujian Mandiri</strong><br>10-15 Juli 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.5); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-file-alt"></i>
-                                <p><strong>Pengumuman</strong><br>5 Agustus 2026</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.5); border-radius: 0.8rem; padding: 1rem; text-align: center;">
-                                <i class="fas fa-users"></i>
-                                <p><strong>Kuota</strong><br>20% dari total penerimaan</p>
-                            </div>
-                        </div>
-                        
-                        <div style="background: rgba(255,255,255,0.6); border-radius: 0.8rem; padding: 1rem; margin-top: 1rem;">
-                            <i class="fas fa-info-circle"></i> <strong>Materi Ujian Mandiri:</strong> Tes Akademik (Matematika, IPA, Bahasa Inggris), Tes Bakat Skolastik, dan Wawancara
-                        </div>
+                    <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1rem; border-left: 5px solid #0d9488;">
+                        <h3 style="color: #064e3b;">📌 UTBK (Seleksi Berdasarkan Ujian Tulis)</h3>
+                        <p>Berdasarkan nilai UTBK. Pendaftaran: 1 Mar - 15 Apr 2026. Kuota 50%.</p>
                     </div>
-                    
-                    <!-- Tabel Perbandingan Jalur -->
-                    <div style="background: white; border-radius: 1rem; padding: 1.5rem; margin-top: 1rem; border: 1px solid #e2e8f0;">
-                        <h3 style="text-align: center; margin-bottom: 1rem;"><i class="fas fa-chart-simple"></i> Perbandingan Jalur Pendaftaran</h3>
-                        <div style="overflow-x: auto;">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <thead>
-                                    <tr style="background: #f1f5f9;">
-                                        <th style="padding: 0.8rem; text-align: left;">Kriteria</th>
-                                        <th style="padding: 0.8rem; text-align: left;">SNBP</th>
-                                        <th style="padding: 0.8rem; text-align: left;">UTBK</th>
-                                        <th style="padding: 0.8rem; text-align: left;">Mandiri</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                                        <td style="padding: 0.8rem;">Biaya Pendaftaran</td>
-                                        <td style="padding: 0.8rem;">Gratis</td>
-                                        <td style="padding: 0.8rem;">Rp 200.000</td>
-                                        <td style="padding: 0.8rem;">Rp 200.000</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                                        <td style="padding: 0.8rem;">Seleksi Berdasarkan</td>
-                                        <td style="padding: 0.8rem;">Rapor & Prestasi</td>
-                                        <td style="padding: 0.8rem;">Nilai UTBK</td>
-                                        <td style="padding: 0.8rem;">Ujian Mandiri</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                                        <td style="padding: 0.8rem;">Kuota</td>
-                                        <td style="padding: 0.8rem;">30%</td>
-                                        <td style="padding: 0.8rem;">50%</td>
-                                        <td style="padding: 0.8rem;">20%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                                        <td style="padding: 0.8rem;">Target Peserta</td>
-                                        <td style="padding: 0.8rem;">Siswa berprestasi</td>
-                                        <td style="padding: 0.8rem;">Semua lulusan</td>
-                                        <td style="padding: 0.8rem;">Semua lulusan</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 0.8rem;">Tingkat Kesulitan</td>
-                                        <td style="padding: 0.8rem;">Kompetitif</td>
-                                        <td style="padding: 0.8rem;">Sangat Kompetitif</td>
-                                        <td style="padding: 0.8rem;">Kompetitif</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1rem; border-left: 5px solid #0d9488;">
+                        <h3 style="color: #064e3b;">📌 Mandiri (Seleksi Khusus Poltekkes)</h3>
+                        <p>Ujian mandiri Poltekkes. Pendaftaran: 1 Apr - 30 Jun 2026. Kuota 20%.</p>
                     </div>
-                    
-                    <!-- FAQ Jalur Pendaftaran -->
-                    <div style="background: #f8fafc; border-radius: 1rem; padding: 1.5rem; margin-top: 1.5rem;">
-                        <h3><i class="fas fa-question-circle"></i> Pertanyaan Umum Seputar Jalur Pendaftaran</h3>
-                        <div style="margin-top: 1rem;">
-                            <div style="margin-bottom: 1rem;">
-                                <p style="font-weight: bold;">❓ Apakah bisa mendaftar di lebih dari satu jalur?</p>
-                                <p style="color: #64748b;">✅ Ya, Anda bisa mendaftar di SNBP, UTBK, dan Mandiri sekaligus. Namun jika sudah diterima di jalur SNBP, maka otomatis gugur untuk jalur lainnya.</p>
-                            </div>
-                            <div style="margin-bottom: 1rem;">
-                                <p style="font-weight: bold;">❓ Bagaimana jika tidak lolos SNBP/UTBK?</p>
-                                <p style="color: #64748b;">✅ Anda masih bisa mengikuti jalur Mandiri. Pendaftaran Mandiri dibuka setelah pengumuman UTBK.</p>
-                            </div>
-                            <div style="margin-bottom: 1rem;">
-                                <p style="font-weight: bold;">❓ Apakah ada jalur khusus untuk bidikmisi/KIP?</p>
-                                <p style="color: #64748b;">✅ Ada. Pendaftar dari keluarga kurang mampu bisa mengajukan KIP Kuliah melalui jalur UTBK atau Mandiri dengan melampirkan bukti dokumen pendukung.</p>
-                            </div>
-                            <div>
-                                <p style="font-weight: bold;">❓ Berapa nilai minimal untuk lolos?</p>
-                                <p style="color: #64748b;">✅ Setiap tahun berbeda tergantung peminat dan kapasitas. Rata-rata nilai UTBK yang diterima minimal 550, untuk mandiri minimal nilai ujian 70.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Tombol Aksi -->
-                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
-                        <button onclick="showPage('registerPage')" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.8rem 2rem; border-radius: 2rem; border: none; font-weight: bold; cursor: pointer;"><i class="fas fa-file-alt"></i> Daftar Sekarang</button>
-                        <button onclick="showDashboardSection('infoSection')" style="background: #e2e8f0; color: #1e293b; padding: 0.8rem 2rem; border-radius: 2rem; border: none; font-weight: bold; cursor: pointer;"><i class="fas fa-info-circle"></i> Info Lengkap</button>
+                    <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                        <button onclick="showPage('registerPage')" style="background: #0d9488; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; cursor: pointer;">Daftar Sekarang</button>
                     </div>
                 </div>
             </div>
 
-                        <!-- HALAMAN PROSES PENDAFTARAN LENGKAP -->
+            <!-- PROSES SECTION -->
             <div id="prosesSection" class="section">
                 <div style="max-width: 1000px; margin: 0 auto;">
-                    <!-- Header -->
                     <div style="background: linear-gradient(135deg, #064e3b, #0d9488); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; color: white; text-align: center;">
-                        <i class="fas fa-chalkboard-user" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-                        <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Proses Pendaftaran SPMB Poltekkes 2026</h1>
-                        <p style="opacity: 0.9; font-size: 0.95rem;">Panduan lengkap dari awal pendaftaran sampai dinyatakan diterima</p>
+                        <i class="fas fa-chalkboard-user" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h1 style="font-size: 1.8rem;">Proses Pendaftaran SPMB Poltekkes 2026</h1>
                     </div>
-
-                    <!-- Timeline Proses (Vertical) -->
-                    <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; font-size: 1.2rem; margin-bottom: 1.5rem;"><i class="fas fa-timeline"></i> 7 Langkah Menuju Mahasiswa Poltekkes</h3>
-                        
-                        <!-- Langkah 1 -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; position: relative;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">1</div>
-                                <div style="width: 2px; height: 60px; background: #dcfce7; margin: 0.5rem auto;"></div>
-                            </div>
-                            <div style="flex: 1; padding-bottom: 0.5rem;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Persiapan Dokumen</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Siapkan ijazah/SKL, KTP/Kartu Pelajar, pas foto 4x6, dan dokumen pendukung lainnya (prestasi, sertifikat). Scan dalam format JPG/PDF maksimal 2MB.</p>
-                                <div style="margin-top: 0.5rem; background: #f0fdf4; padding: 0.5rem; border-radius: 0.5rem; display: inline-block;">
-                                    <i class="fas fa-check-circle" style="color: #0d9488; font-size: 0.7rem;"></i>
-                                    <span style="font-size: 0.7rem; color: #064e3b;">✅ Dokumen wajib: Ijazah, KTP, Pas foto</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Langkah 2 -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">2</div>
-                                <div style="width: 2px; height: 60px; background: #dcfce7; margin: 0.5rem auto;"></div>
-                            </div>
-                            <div style="flex: 1;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Buat Akun & Login</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Kunjungi website resmi SPMB Poltekkes, klik "Daftar" dan isi data diri lengkap. Gunakan email aktif karena semua notifikasi akan dikirim ke email tersebut.</p>
-                                <div style="margin-top: 0.5rem; background: #f0fdf4; padding: 0.5rem; border-radius: 0.5rem; display: inline-block;">
-                                    <i class="fas fa-check-circle" style="color: #0d9488; font-size: 0.7rem;"></i>
-                                    <span style="font-size: 0.7rem; color: #064e3b;">📧 Gunakan email yang aktif (Gmail/Outlook)</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Langkah 3 -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">3</div>
-                                <div style="width: 2px; height: 60px; background: #dcfce7; margin: 0.5rem auto;"></div>
-                            </div>
-                            <div style="flex: 1;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Pilih Jalur Pendaftaran</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Pilih salah satu jalur: SNBP (prestasi), UTBK (nilai ujian), atau Mandiri (ujian khusus Poltekkes). Bisa memilih lebih dari satu jalur.</p>
-                                <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                    <span style="background: #dcfce7; color: #064e3b; padding: 0.2rem 0.6rem; border-radius: 2rem; font-size: 0.7rem;">SNBP</span>
-                                    <span style="background: #dcfce7; color: #064e3b; padding: 0.2rem 0.6rem; border-radius: 2rem; font-size: 0.7rem;">UTBK</span>
-                                    <span style="background: #dcfce7; color: #064e3b; padding: 0.2rem 0.6rem; border-radius: 2rem; font-size: 0.7rem;">Mandiri</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Langkah 4 -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">4</div>
-                                <div style="width: 2px; height: 60px; background: #dcfce7; margin: 0.5rem auto;"></div>
-                            </div>
-                            <div style="flex: 1;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Isi Formulir Pendaftaran</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Lengkapi data pribadi, alamat, asal sekolah, pilih program studi (maksimal 3 pilihan), dan upload dokumen yang diperlukan.</p>
-                                <div style="margin-top: 0.5rem; background: #f0fdf4; padding: 0.5rem; border-radius: 0.5rem;">
-                                    <i class="fas fa-exclamation-triangle" style="color: #f59e0b; font-size: 0.7rem;"></i>
-                                    <span style="font-size: 0.7rem; color: #064e3b;">⚠️ Pastikan semua data diisi dengan benar, tidak bisa diubah setelah submit!</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Langkah 5 -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">5</div>
-                                <div style="width: 2px; height: 60px; background: #dcfce7; margin: 0.5rem auto;"></div>
-                            </div>
-                            <div style="flex: 1;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Ikuti Seleksi / Ujian</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Sesuai jalur yang dipilih: SNBP (seleksi rapor & prestasi), UTBK (ikuti ujian nasional), atau Mandiri (ikuti ujian tulis & wawancara di Poltekkes).</p>
-                                <div style="margin-top: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                                    <div><i class="fas fa-file-alt" style="color: #0d9488;"></i> <span style="font-size: 0.75rem;">Ujian Tulis</span></div>
-                                    <div><i class="fas fa-microphone" style="color: #0d9488;"></i> <span style="font-size: 0.75rem;">Wawancara</span></div>
-                                    <div><i class="fas fa-laptop" style="color: #0d9488;"></i> <span style="font-size: 0.75rem;">Tes Komputer</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Langkah 6 -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">6</div>
-                                <div style="width: 2px; height: 60px; background: #dcfce7; margin: 0.5rem auto;"></div>
-                            </div>
-                            <div style="flex: 1;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Pengumuman Hasil Seleksi</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Hasil seleksi diumumkan pada tanggal 5 Agustus 2026 melalui website SPMB. Cek secara berkala dan login ke akun Anda.</p>
-                                <div style="margin-top: 0.5rem; background: #f0fdf4; padding: 0.5rem; border-radius: 0.5rem; display: inline-block;">
-                                    <i class="fas fa-calendar-alt" style="color: #0d9488; font-size: 0.7rem;"></i>
-                                    <span style="font-size: 0.7rem; color: #064e3b;">📅 Pengumuman: 5 Agustus 2026</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Langkah 7 -->
-                        <div style="display: flex; gap: 1rem;">
-                            <div style="min-width: 50px; text-align: center;">
-                                <div style="width: 40px; height: 40px; background: #064e3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">7</div>
-                            </div>
-                            <div style="flex: 1;">
-                                <h4 style="color: #064e3b; font-size: 1rem;">Daftar Ulang & Jadi Mahasiswa!</h4>
-                                <p style="color: #475569; font-size: 0.85rem; margin-top: 0.3rem;">Jika dinyatakan lolos, segera lakukan daftar ulang dengan membawa berkas asli. Bayar UKT sesuai ketentuan, ikuti ospek, dan siap memulai perkuliahan!</p>
-                                <div style="margin-top: 0.5rem; background: #dcfce7; padding: 0.5rem; border-radius: 0.5rem;">
-                                    <i class="fas fa-graduation-cap" style="color: #064e3b; font-size: 0.7rem;"></i>
-                                    <span style="font-size: 0.7rem; color: #064e3b; font-weight: bold;">🎓 Selamat! Anda resmi menjadi mahasiswa Poltekkes Kemenkes</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; display: flex; align-items: center; gap: 1rem;"><div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">1</div><div><strong>Persiapan Dokumen</strong><br>Ijazah, KTP, Pas foto</div></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; display: flex; align-items: center; gap: 1rem;"><div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">2</div><div><strong>Buat Akun & Login</strong><br>Registrasi online</div></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; display: flex; align-items: center; gap: 1rem;"><div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">3</div><div><strong>Pilih Jalur & Isi Formulir</strong><br>SNBP/UTBK/Mandiri</div></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; display: flex; align-items: center; gap: 1rem;"><div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">4</div><div><strong>Ikuti Seleksi/Ujian</strong><br>Sesuai jalur yang dipilih</div></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; display: flex; align-items: center; gap: 1rem;"><div style="width: 40px; height: 40px; background: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">5</div><div><strong>Pengumuman</strong><br>5 Agustus 2026</div></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; display: flex; align-items: center; gap: 1rem;"><div style="width: 40px; height: 40px; background: #064e3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">6</div><div><strong>Daftar Ulang & Jadi Mahasiswa!</strong><br>🎓 Selamat bergabung!</div></div>
                     </div>
-
-                    <!-- Tabel Timeline Lengkap -->
-                    <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; font-size: 1.1rem; margin-bottom: 1rem;"><i class="fas fa-table-list"></i> Timeline Lengkap Pendaftaran 2026</h3>
-                        <div style="overflow-x: auto;">
-                            <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
-                                <thead>
-                                    <tr style="background: #064e3b; color: white;">
-                                        <th style="padding: 0.6rem; text-align: left;">Tahap</th>
-                                        <th style="padding: 0.6rem; text-align: left;">Kegiatan</th>
-                                        <th style="padding: 0.6rem; text-align: left;">Tanggal</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.6rem;">1</td><td>Pendaftaran Gelombang 1</td><td>1 Jan - 30 Mar 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.6rem;">2</td><td>Pendaftaran Gelombang 2</td><td>1 Apr - 30 Jun 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.6rem;">3</td><td>Verifikasi Berkas</td><td>1-10 Juli 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.6rem;">4</td><td>Ujian Mandiri (Tulis & Wawancara)</td><td>10-15 Juli 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.6rem;">5</td><td>Pengolahan Nilai & Seleksi</td><td>16-31 Juli 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.6rem;">6</td><td>Pengumuman Kelulusan</td><td>5 Agustus 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 0.6rem;">7</td><td>Daftar Ulang & Pembayaran UKT</td><td>6-15 Agustus 2026</td></tr>
-                                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;"><td style="padding: 0.6rem;">8</td><td>Pengenalan Kampus (Ospek)</td><td>20-28 Agustus 2026</td></tr>
-                                    <tr><td style="padding: 0.6rem;">9</td><td>Mulai Perkuliahan</td><td>1 September 2026</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                        <button onclick="showPage('registerPage')" style="background: #0d9488; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; cursor: pointer;">Daftar Sekarang</button>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Checklist Persyaratan -->
-                    <div style="background: #f0fdf4; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #dcfce7;">
-                        <h3 style="color: #064e3b; font-size: 1rem; margin-bottom: 1rem;"><i class="fas fa-clipboard-list"></i> Checklist Dokumen yang Harus Disiapkan</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.8rem;">
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> Ijazah / SKL SMA/SMK/MA</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> KTP / Kartu Keluarga</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> Pas foto 4x6 (2 lembar)</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> Sertifikat prestasi (jika ada)</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> Surat keterangan sehat dari dokter</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> Bukti pendaftaran online (print)</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> SKCK (untuk prodi tertentu)</div>
-                            <div><i class="fas fa-check-circle" style="color: #0d9488;"></i> Surat rekomendasi (opsional)</div>
-                        </div>
+            <!-- BANTUAN SECTION -->
+            <div id="bantuanSection" class="section">
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <div style="background: linear-gradient(135deg, #064e3b, #0d9488); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; color: white; text-align: center;">
+                        <i class="fas fa-headset" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h1 style="font-size: 1.8rem;">Pusat Bantuan</h1>
                     </div>
-
-                    <!-- Tips Lolos Seleksi -->
-                    <div style="background: white; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
-                        <h3 style="color: #064e3b; font-size: 1rem; margin-bottom: 1rem;"><i class="fas fa-lightbulb"></i> Tips Lolos Seleksi Poltekkes</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-                            <div style="background: #f8fafc; padding: 0.8rem; border-radius: 0.5rem;">
-                                <i class="fas fa-chart-line" style="color: #0d9488;"></i>
-                                <p style="font-size: 0.8rem; margin-top: 0.3rem;"><strong>1. Persiapkan Nilai Rapor</strong><br>Pastikan nilai rapor semester 1-5 minimal 80 untuk bersaing di jalur SNBP.</p>
-                            </div>
-                            <div style="background: #f8fafc; padding: 0.8rem; border-radius: 0.5rem;">
-                                <i class="fas fa-book-open" style="color: #0d9488;"></i>
-                                <p style="font-size: 0.8rem; margin-top: 0.3rem;"><strong>2. Pelajari Materi Ujian</strong><br>Fokus pada Matematika Dasar, IPA (Biologi, Kimia, Fisika), dan Bahasa Inggris.</p>
-                            </div>
-                            <div style="background: #f8fafc; padding: 0.8rem; border-radius: 0.5rem;">
-                                <i class="fas fa-trophy" style="color: #0d9488;"></i>
-                                <p style="font-size: 0.8rem; margin-top: 0.3rem;"><strong>3. Kumpulkan Prestasi</strong><br>Sertifikat lomba akan menambah nilai plus di jalur prestasi.</p>
-                            </div>
-                            <div style="background: #f8fafc; padding: 0.8rem; border-radius: 0.5rem;">
-                                <i class="fas fa-calendar-check" style="color: #0d9488;"></i>
-                                <p style="font-size: 0.8rem; margin-top: 0.3rem;"><strong>4. Jangan Lewatkan Deadline</strong><br>Catat semua tanggal penting agar tidak ketinggalan pendaftaran.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tombol Aksi -->
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <button onclick="showPage('registerPage')" style="background: #0d9488; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-file-alt"></i> Daftar Sekarang</button>
-                        <button onclick="showDashboardSection('jalurSection')" style="background: #064e3b; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-road"></i> Lihat Jalur</button>
-                        <button onclick="showDashboardSection('infoSection')" style="background: #334155; color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; border: none; font-weight: 600; cursor: pointer;"><i class="fas fa-info-circle"></i> Info Lengkap</button>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; text-align: center;"><i class="fas fa-phone-alt" style="font-size: 2rem; color: #0d9488;"></i><h3>Call Center</h3><p>1500-567</p><p>24 Jam</p></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; text-align: center;"><i class="fas fa-envelope" style="font-size: 2rem; color: #0d9488;"></i><h3>Email</h3><p>spmb@poltekkes.kemkes.go.id</p></div>
+                        <div style="background: white; border-radius: 0.75rem; padding: 1rem; text-align: center;"><i class="fab fa-whatsapp" style="font-size: 2rem; color: #25D366;"></i><h3>WhatsApp</h3><p>0811-888-5678</p></div>
                     </div>
                 </div>
             </div>
